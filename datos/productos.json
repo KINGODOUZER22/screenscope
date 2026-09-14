@@ -477,5 +477,168 @@
         "text": "Todo iba perfecto, pero a los 6 meses se quedó sin imagen y no di señal ninguna."
       }
     ]
+  },
+  {
+    "id": "benq-ma320u",
+    "sample": false,
+    "asin": "B0DF9ZLFTN",
+    "name": "BenQ MA320U",
+    "brand": "BenQ",
+    "affiliate_url": "https://www.amazon.es/dp/B0DF9ZLFTN?tag=dozerid-21",
+    "affiliate_tag": "dozerid-21",
+    "canonical_url": "https://www.amazon.es/dp/B0DF9ZLFTN",
+    "images": [
+      "assets/img/benq-ma320u-1.webp",
+      "assets/img/benq-ma320u-2.webp",
+      "assets/img/benq-ma320u-3.webp"
+    ],
+    "category": "Design",
+    "isFeatured": false,
+    "showInTopMenu": false,
+    "retailPrice": 569.99,
+    "discountedPrice": 569.99,
+    "priceRange": "premium",
+    "avgRating": 4.6,
+    "reviewCount": 722,
+    "priceCapturedAt": "2026-09-14",
+    "panelType": null,
+    "sizeInches": 32,
+    "resolution": "4K",
+    "refreshRateHz": 60,
+    "responseTimeMs": 5,
+    "brightnessNits": 550,
+    "hdr": null,
+    "curved": false,
+    "curvatureRadius": null,
+    "syncTech": "FreeSync",
+    "heightAdjustable": true,
+    "pivot": true,
+    "weightKg": 9.1,
+    "warrantyYears": 2.0,
+    "specsExtra": {
+      "Contraste": "2000:1",
+      "USB-C": "2x USB-C (90W + 15W)",
+      "Cobertura de color": "99% del espacio P3, calibrado para Mac",
+      "Modelo": "MA320U"
+    },
+    "scoreSharpness": 8,
+    "scoreSmoothness": 3,
+    "scoreColorHdr": 8,
+    "scoreErgonomics": 9,
+    "scoreGaming": 2,
+    "scoreValue": 5,
+    "description": "Un monitor 4K de 32 pulgadas pensado específicamente para Mac: calibración de color P3, USB-C de 90W y controles de brillo/volumen desde el propio teclado del MacBook.",
+    "editorialBody": "<p>El MA320U está diseñado explícitamente como pareja de un MacBook: cubre el 99% del espacio de color P3 con el ajuste de color exclusivo de BenQ para Mac, y sus dos puertos USB-C entregan 90W para cargar el portátil y 15W adicionales para un iPad o iPhone — todo por un único cable.</p><p>El soporte permite ajustar altura, inclinación, giro y rotación (pivote incluido), algo poco común incluso en monitores profesionales de este tamaño. Varios usuarios lo comparan favorablemente incluso con un iMac 27\" 5K.</p><p>El punto débil según las reseñas son los altavoces integrados, descritos como flojos — quien priorice audio de calidad deberá usar unos externos.</p>",
+    "pros": [
+      "Calibración de color P3 pensada específicamente para Mac",
+      "USB-C dual: 90W para el portátil + 15W para otro dispositivo",
+      "Soporte con ajuste de altura, inclinación, giro y pivote"
+    ],
+    "cons": [
+      "Solo 60Hz, no pensado para gaming",
+      "Altavoces integrados de baja calidad, según varias reseñas",
+      "Precio elevado, de los más altos de la comparativa"
+    ],
+    "idealFor": "Usuarios de Mac que quieren un segundo monitor 4K grande con color fiable y un único cable de conexión.",
+    "editorPick": "El favorito para quienes trabajan en el ecosistema Mac.",
+    "reviewsSummary": "722 valoraciones con 4,6 de media: los compradores destacan lo bien que combina con MacBook y iMac, con la única queja recurrente siendo la calidad de los altavoces integrados.",
+    "reviews": [
+      {
+        "author": "Carlos Sánchez",
+        "stars": 5,
+        "text": "Perfecto matrimonio con mi MacBook Air M4. Estoy encantado, incluso comparado con un iMac 27 5K, que también tengo."
+      },
+      {
+        "author": "A. Fotógrafo",
+        "stars": 4,
+        "text": "El monitor es CASI perfecto para Mac. Los altavoces son malísimos, mejor no ponerle altavoces que ponerle eso. Por lo demás es genial, buen precio."
+      },
+      {
+        "author": "Jose Miguel Velasco Riego",
+        "stars": 5,
+        "text": "Lo compré para mi Mac Studio M4 y es impresionante. El embalaje muy bien cuidado, con separadores."
+      }
+    ]
+  },
+  {
+    "id": "koorui-34e6uc",
+    "sample": false,
+    "asin": "B0BZYP24JC",
+    "name": "KOORUI 34E6UC",
+    "brand": "KOORUI",
+    "affiliate_url": "https://www.amazon.es/dp/B0BZYP24JC?tag=dozerid-21",
+    "affiliate_tag": "dozerid-21",
+    "canonical_url": "https://www.amazon.es/dp/B0BZYP24JC",
+    "images": [
+      "assets/img/koorui-34e6uc-1.webp",
+      "assets/img/koorui-34e6uc-2.webp",
+      "assets/img/koorui-34e6uc-3.webp"
+    ],
+    "category": "Ultrawide",
+    "isFeatured": true,
+    "showInTopMenu": false,
+    "retailPrice": 229.99,
+    "discountedPrice": 229.99,
+    "priceRange": "mid",
+    "avgRating": 4.5,
+    "reviewCount": 3132,
+    "priceCapturedAt": "2026-09-14",
+    "panelType": "VA",
+    "sizeInches": 34,
+    "resolution": "Ultrawide QHD",
+    "refreshRateHz": 200,
+    "responseTimeMs": 1,
+    "brightnessNits": 400,
+    "hdr": "HDR400",
+    "curved": true,
+    "curvatureRadius": "1000R",
+    "syncTech": "FreeSync",
+    "heightAdjustable": true,
+    "pivot": true,
+    "weightKg": 4.86,
+    "warrantyYears": 2.0,
+    "specsExtra": {
+      "Contraste": "3000:1",
+      "Cobertura de color": "100% sRGB, 90% DCI-P3",
+      "Ajuste": "altura 110mm, inclinación -5° a 20°, giro -15° a 15°",
+      "Modelo": "34E6UC"
+    },
+    "scoreSharpness": 6,
+    "scoreSmoothness": 9,
+    "scoreColorHdr": 6,
+    "scoreErgonomics": 8,
+    "scoreGaming": 9,
+    "scoreValue": 9,
+    "description": "Un ultrawide curvo de 34 pulgadas con 200Hz, HDR400 y un soporte con ajuste de altura, inclinación y giro — con más de 3.100 valoraciones reales.",
+    "editorialBody": "<p>El 34E6UC combina una curvatura 1000R con resolución QHD ultrawide (3440x1440) y 200Hz de refresco, cubriendo el 100% del espacio sRGB y el 90% de DCI-P3 — números altos para un monitor de este precio.</p><p>A diferencia de otros ultrawide de la comparativa, aquí el soporte sí permite ajustar altura (hasta 110mm), inclinación y giro, además de ser compatible con montaje VESA — buena ergonomía real, no solo sobre el papel.</p><p>El HDR400 recibe alguna crítica en las reseñas por sentirse más un \"HDR de marketing\" que una mejora dramática — algo habitual en este nivel de HDR. Con más de dos años de uso diario intensivo reportado por algunos compradores, la fiabilidad a largo plazo parece sólida.</p>",
+    "pros": [
+      "Soporte con ajuste real de altura, inclinación y giro",
+      "200Hz + 1ms para gaming fluido en formato ultrawide",
+      "Más de 3.100 valoraciones reales respaldan su fiabilidad"
+    ],
+    "cons": [
+      "El HDR400 se queda corto según varias reseñas — mejora limitada",
+      "Panel VA: peor ángulo de visión que un IPS"
+    ],
+    "idealFor": "Quien quiere un ultrawide curvo con buena ergonomía real sin pagar de más.",
+    "editorPick": "El ultrawide con mejor ergonomía de soporte de la comparativa.",
+    "reviewsSummary": "3.132 valoraciones con 4,5 de media: destacan la calidad de imagen y la fluidez a 200Hz, con alguna crítica al HDR400 por quedarse corto frente a lo anunciado.",
+    "reviews": [
+      {
+        "author": "Hernan DB",
+        "stars": 5,
+        "text": "Tras varios días de uso, la experiencia ha sido muy satisfactoria. La pantalla ultrapanorámica con resolución WQHD se ve espectacular."
+      },
+      {
+        "author": "Johao",
+        "stars": 4,
+        "text": "Los colores son espectaculares, la calidad es buena, la tasa de refresco genial. Si pongo un pero es a su HDR: lo he configurado varias veces y no termina de convencer."
+      },
+      {
+        "author": "Xevi",
+        "stars": 5,
+        "text": "Después de dos años, cero problemas y calidad de imagen impresionante, funcionando de 8 a 10 horas diarias."
+      }
+    ]
   }
 ]
