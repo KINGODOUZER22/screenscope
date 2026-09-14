@@ -304,6 +304,41 @@ def render_spec_table(p):
     return '<table class="spec-table">{0}</table>{1}'.format("".join(rows), extra_html)
 
 
+def load_accesorios():
+    path = os.path.join(ROOT, "datos", "accesorios.json")
+    if not os.path.exists(path):
+        return []
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def render_accessories_section():
+    items = load_accesorios()
+    if not items:
+        return ""
+    cards = ""
+    for a in items:
+        cards += """
+      <article class="acc-card">
+        <img src="{img}" alt="{title}" loading="lazy">
+        <p class="acc-title">{title}</p>
+        <p class="acc-tagline">{tagline}</p>
+        <p class="acc-meta">&#9733; {rating} &middot; {reviews} reseñas</p>
+        <p class="acc-price">{price}</p>
+        <a class="btn btn-ghost btn-sm" href="{url}" target="_blank" rel="sponsored nofollow noopener">Ver en Amazon</a>
+      </article>""".format(
+            img=esc(a["image"]), title=esc(a["title"]), tagline=esc(a["tagline"]),
+            rating=a.get("avgRating", "—"), reviews=a.get("reviewCount", 0),
+            price=esc(a["price"]), url=esc(a["affiliate_url"]),
+        )
+    return """
+  <section class="section">
+    <h2>Accesorios recomendados para tu monitor</h2>
+    <p class="lede">Complementos populares que suelen comprarse junto a un monitor nuevo — no forman parte de esta comparativa de monitores, pero son útiles para tu montaje.</p>
+    <div class="acc-grid">{0}</div>
+  </section>""".format(cards)
+
+
 def render_ficha(p):
     thumbs = "".join(
         '<button data-src="{0}" class="{1}"><img src="{0}" alt="{2} vista {3}" loading="lazy"></button>'.format(
@@ -394,6 +429,8 @@ def render_ficha(p):
 
   <a class="btn btn-primary btn-comprar" href="{affiliate_url}" target="_blank" rel="sponsored nofollow noopener">{buy_label}</a>
 
+  {accessories}
+
   <p class="disclosure">{disclosure}</p>
 </article>
 
@@ -410,6 +447,7 @@ def render_ficha(p):
         specs=render_spec_table(p),
         editorial=p.get("editorialBody", ""), pros=pros_html, cons=cons_html, ideal=esc(p.get("idealFor", "")),
         reviews_summary=esc(p.get("reviewsSummary", "")), reviews_list=reviews_html,
+        accessories=render_accessories_section(),
         disclosure=esc(BRAND["disclosureShort"]),
         jsonld=json.dumps(build_jsonld_product(p), ensure_ascii=False),
     )

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "acc-soporte-brazo",
+    "title": "GRIFEMA GB2003-1 — Brazo de monitor con resorte de gas",
+    "tagline": "Libera espacio de escritorio, ajustable en altura, giro e inclinación.",
+    "price": "24,98 €",
+    "avgRating": 4.6,
+    "reviewCount": 5422,
+    "image": "assets/img/acc-soporte-brazo.webp",
+    "affiliate_url": "https://www.amazon.es/dp/B0BY7QST59?tag=dozerid-21"
+  },
+  {
+    "id": "acc-cable-dp",
+    "title": "Amazon Basics — Cable DisplayPort 1.4 (8K/4K120Hz)",
+    "tagline": "El cable correcto para aprovechar la tasa de refresco máxima de tu monitor.",
+    "price": "9,49 €",
+    "avgRating": 4.7,
+    "reviewCount": 15828,
+    "image": "assets/img/acc-cable-dp.webp",
+    "affiliate_url": "https://www.amazon.es/dp/B08FBJYWTJ?tag=dozerid-21"
+  },
+  {
+    "id": "acc-cable-hdmi",
+    "title": "Amazon Basics — Cable HDMI 48Gbps (8K/4K120Hz)",
+    "tagline": "Alternativa a DisplayPort para consolas y tarjetas gráficas con HDMI 2.1.",
+    "price": "9,49 €",
+    "avgRating": 4.6,
+    "reviewCount": 15973,
+    "image": "assets/img/acc-cable-hdmi.webp",
+    "affiliate_url": "https://www.amazon.es/dp/B08BS29VG4?tag=dozerid-21"
+  },
+  {
+    "id": "acc-screenbar",
+    "title": "BenQ ScreenBar — Barra de luz para monitor",
+    "tagline": "Ilumina el escritorio sin reflejos en la pantalla ni ocupar espacio.",
+    "price": "133,70 €",
+    "avgRating": 4.7,
+    "reviewCount": 4484,
+    "image": "assets/img/acc-screenbar.webp",
+    "affiliate_url": "https://www.amazon.es/dp/B0785D93KD?tag=dozerid-21"
+  },
+  {
+    "id": "acc-kit-limpieza",
+    "title": "Alyvisun — Kit de limpieza 11 en 1",
+    "tagline": "Para dejar la pantalla y el teclado impecables sin rayarlos.",
+    "price": "10,69 €",
+    "avgRating": 4.5,
+    "reviewCount": 4128,
+    "image": "assets/img/acc-kit-limpieza.webp",
+    "affiliate_url": "https://www.amazon.es/dp/B0BZCTRKNK?tag=dozerid-21"
+  }
+]
