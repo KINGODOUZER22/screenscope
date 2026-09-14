@@ -291,7 +291,8 @@ def render_spec_table(p):
             elif isinstance(v, bool):
                 display = fmt_bool(v)
             elif isinstance(v, float):
-                display = "{0}{1}".format(str(v).replace(".", ","), unit)
+                num = str(int(v)) if v == int(v) else str(v).replace(".", ",")
+                display = "{0}{1}".format(num, unit)
             else:
                 display = "{0}{1}".format(v, unit)
             rows.append("<tr><th>{0}</th><td>{1}</td></tr>".format(esc(label), esc(display)))
@@ -456,6 +457,35 @@ def build_db_js(products):
         f.write(js)
 
 
+def load_curiosidades():
+    path = os.path.join(ROOT, "datos", "curiosidades.json")
+    if not os.path.exists(path):
+        return []
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def render_curio_row():
+    items = load_curiosidades()
+    if not items:
+        return ""
+    c = items[0]
+    return """
+<div class="curio-row">
+  <div class="curio-widget">
+    <span class="curio-label">🔎 Encontrado por curiosidad</span>
+    <img src="{img}" alt="{title}" loading="lazy">
+    <p class="curio-title">{title}</p>
+    <p class="curio-note">{note}</p>
+    <p><span class="curio-price">{price}</span>&#9733; {rating}</p>
+    <a class="btn btn-ghost btn-sm" href="{url}" target="_blank" rel="sponsored nofollow noopener">Ver en Amazon</a>
+  </div>
+</div>""".format(
+        img=esc(c["image"]), title=esc(c["title"]), note=esc(c["note"]),
+        price=esc(c["price"]), rating=c.get("avgRating", "—"), url=esc(c["affiliate_url"]),
+    )
+
+
 def build_index(products):
     featured = [p for p in products if p.get("isFeatured")]
     cards = "".join(render_card(p) for p in featured or products)
@@ -463,6 +493,7 @@ def build_index(products):
         '<a class="cat-entry reveal" href="{0}"><h3>{1}</h3><p>{2}</p></a>'.format(c["slug"], c["title"], c["intro"][:90] + "…")
         for c in CATEGORIES
     )
+    curio_row = render_curio_row()
     body = """
 <section class="hero">
   <div class="container hero-grid">
@@ -497,8 +528,9 @@ def build_index(products):
     <h2>¿Qué estás buscando?</h2>
   </div>
   <div class="grid">{cat_cards}</div>
+  {curio_row}
 </section>
-""".format(cards=cards, cat_cards=cat_cards)
+""".format(cards=cards, cat_cards=cat_cards, curio_row=curio_row)
     html_out = page_shell(
         "ScreenScope — Comparativas de Monitores Basadas en Datos Reales",
         "Compara monitores gaming, de diseño y ultrawide lado a lado con puntuaciones editoriales, ficha técnica completa y precios de Amazon.",

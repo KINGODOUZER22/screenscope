@@ -251,6 +251,20 @@ details.specs-extra summary { cursor: pointer; font-weight: 600; }
 .cat-entry h3 { margin-bottom: .3rem; }
 .cat-entry p { color: var(--text-dim); font-size: .88rem; }
 
+.curio-row { display: flex; justify-content: flex-end; margin-top: 1.5rem; }
+.curio-widget {
+  max-width: 220px; padding: .9rem; border: 1px dashed var(--line);
+  border-radius: var(--radius-sm); background: var(--bg-card); font-size: .8rem;
+}
+.curio-label {
+  display: block; font-family: var(--mono); font-size: .66rem; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--text-mute); margin-bottom: .5rem;
+}
+.curio-widget img { width: 100%; border-radius: 6px; margin-bottom: .5rem; aspect-ratio: 3/4; object-fit: cover; }
+.curio-widget .curio-title { font-weight: 600; font-size: .82rem; line-height: 1.3; margin-bottom: .3rem; }
+.curio-widget .curio-note { color: var(--text-mute); font-size: .72rem; margin-bottom: .5rem; }
+.curio-widget .curio-price { font-weight: 700; margin-right: .4rem; }
+
 .guide-body { max-width: 72ch; }
 .guide-body p { margin-bottom: 1rem; color: var(--text-dim); }
 .guide-body h2 { margin-top: 2rem; margin-bottom: .8rem; }
