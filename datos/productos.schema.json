@@ -1,0 +1,70 @@
+{
+  "_comment": "Data contract for a monitor affiliate product record. The scraper (populate step) maps into this schema; every page renders from it. Groups A/B/E are fixed across niches; C (specs) and D (scores) are designed for 'monitors'.",
+  "niche": "monitors",
+  "currency": "EUR",
+  "groups": {
+    "A_identity_affiliate": {
+      "id":            { "type": "string", "required": true, "desc": "stable kebab-case slug" },
+      "asin":          { "type": "string", "required": true, "source": "scrape" },
+      "name":          { "type": "string", "required": true, "source": "scrape" },
+      "brand":         { "type": "string", "source": "scrape" },
+      "affiliate_url": { "type": "string", "required": true, "source": "link", "note": "VERBATIM, never rewritten" },
+      "affiliate_tag": { "type": "string", "required": true, "source": "link" },
+      "canonical_url": { "type": "string", "source": "link" },
+      "images":        { "type": "array<string>", "source": "scrape+webp", "note": "local paths assets/img/<id>-N.webp" },
+      "category":      { "type": "enum", "values": ["Gaming", "Office", "Design", "Ultrawide"] },
+      "isFeatured":    { "type": "bool", "default": false },
+      "showInTopMenu": { "type": "bool", "default": false }
+    },
+    "B_commercial": {
+      "retailPrice":      { "type": "number", "unit": "EUR", "source": "scrape" },
+      "discountedPrice":  { "type": "number", "unit": "EUR", "source": "scrape" },
+      "priceRange":       { "type": "enum", "values": ["budget", "mid", "high", "premium"], "source": "computed" },
+      "avgRating":        { "type": "number", "unit": "stars", "source": "scrape" },
+      "reviewCount":      { "type": "int", "source": "scrape" },
+      "priceCapturedAt":  { "type": "date", "source": "computed", "note": "capture date; price is indicative" }
+    },
+    "C_technical_specs": {
+      "panelType":         { "type": "enum", "values": ["IPS", "VA", "TN", "OLED", "QD-OLED", "Mini-LED"] },
+      "sizeInches":        { "type": "number", "unit": "in" },
+      "resolution":        { "type": "enum", "values": ["1080p", "1440p", "4K", "Ultrawide QHD", "Ultrawide DQHD", "5K", "8K"] },
+      "refreshRateHz":     { "type": "int", "unit": "Hz" },
+      "responseTimeMs":    { "type": "number", "unit": "ms", "best": "min" },
+      "brightnessNits":    { "type": "int", "unit": "nits" },
+      "hdr":               { "type": "enum", "values": ["none", "HDR10", "HDR400", "HDR600", "HDR1000"] },
+      "curved":            { "type": "bool" },
+      "curvatureRadius":   { "type": "string", "note": "e.g. 1000R; null if flat" },
+      "syncTech":          { "type": "enum", "values": ["none", "FreeSync", "G-Sync", "FreeSync+G-Sync"] },
+      "heightAdjustable":  { "type": "bool" },
+      "pivot":             { "type": "bool" },
+      "weightKg":          { "type": "number", "unit": "kg", "best": "min" },
+      "warrantyYears":     { "type": "number", "unit": "years" },
+      "specsExtra":        { "type": "object", "desc": "escape hatch: {label: value} for unmapped scraped specs" }
+    },
+    "D_scores_0_10": {
+      "_note": "Editorial, computed from specs over this catalog's min/max. Recompute ALL when the catalog changes.",
+      "scoreSharpness":  { "from": "resolution + sizeInches + panelType" },
+      "scoreSmoothness": { "from": "refreshRateHz + responseTimeMs" },
+      "scoreColorHdr":   { "from": "panelType + hdr + brightnessNits" },
+      "scoreErgonomics": { "from": "heightAdjustable + pivot + weightKg" },
+      "scoreGaming":     { "from": "syncTech + refreshRateHz + responseTimeMs" },
+      "scoreValue":      { "from": "specs vs price" }
+    },
+    "E_editorial": {
+      "description":       { "type": "string", "desc": "2-4 sentences" },
+      "editorialBody":      { "type": "html", "desc": "real paragraphs, blog tone" },
+      "pros":              { "type": "array<string>" },
+      "cons":              { "type": "array<string>" },
+      "idealFor":          { "type": "string" },
+      "editorPick":        { "type": "string" },
+      "reviewsSummary":    { "type": "string", "desc": "summary of scraped reviews, never invented" }
+    }
+  },
+  "rules": [
+    "Any value not obtained => null (UI shows '—'). Never invent.",
+    "Scores are editorial and comparable across products; recompute when the catalog changes.",
+    "affiliate_url and affiliate_tag are preserved verbatim; every buy button uses them.",
+    "Price is a snapshot with priceCapturedAt; label it as indicative.",
+    "Unmappable specs go into specsExtra as text, never forced into a numeric field."
+  ]
+}
