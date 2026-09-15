@@ -27,6 +27,9 @@ BRAND = {
     "disclosureShort": "ScreenScope participa en el Programa de Afiliados de Amazon EU. Como afiliados, obtenemos ingresos por las compras que cumplen los requisitos aplicables, sin coste adicional para ti.",
 }
 
+SITE_URL = "https://kingodouzer22.github.io/screenscope/"
+DEFAULT_OG_IMAGE = ""  # se rellena en main() con la imagen de un producto destacado
+
 NAV = [
     ("Inicio", "index.html"),
     ("Gaming", "categoria-gaming.html"),
@@ -49,18 +52,27 @@ CATEGORIES = [
         "slug": "categoria-gaming.html",
         "title": "Monitores Gaming",
         "intro": "Pantallas de alta tasa de refresco y bajo tiempo de respuesta pensadas para gaming competitivo y casual — aquí importan más los Hz, los ms y la tecnología de sincronización que la resolución por sí sola.",
+        "seoTitle": "Mejores Monitores Gaming 2026: Comparativa, Precios y Opiniones — ScreenScope",
+        "seoDescription": "Compara los mejores monitores gaming de 144Hz, 165Hz y 240Hz por tasa de refresco, tiempo de respuesta y precio en Amazon. Encuentra el monitor gaming barato u oferta que se ajusta a tu presupuesto en 2026.",
+        "keywords": "monitor gaming, mejor monitor gaming 2026, monitor gaming barato, monitor 144hz, monitor 240hz, monitor gaming oferta, monitor gaming amazon, comparativa monitores gaming",
     },
     {
         "key": "Design",
         "slug": "categoria-diseno.html",
         "title": "Monitores de Diseño y Productividad",
         "intro": "Monitores de alta resolución y color preciso para foto, vídeo y trabajo diario, donde la calidad del panel y la calibración de fábrica importan más que la tasa de refresco.",
+        "seoTitle": "Mejores Monitores para Diseño y Fotografía 2026: Comparativa — ScreenScope",
+        "seoDescription": "Compara monitores profesionales para diseño gráfico, edición de vídeo y fotografía por precisión de color, resolución 4K y calibración de fábrica, con precios reales de Amazon.",
+        "keywords": "monitor para diseño gráfico, monitor para fotografía, monitor 4k profesional, monitor color preciso, mejor monitor para editar vídeo, monitor para trabajo, monitor productividad",
     },
     {
         "key": "Ultrawide",
         "slug": "categoria-ultrawide.html",
         "title": "Monitores Ultrawide",
         "intro": "Pantallas de formato ancho que sustituyen un escritorio con varios monitores por una sola pantalla curva — el precio a pagar es espacio de mesa y presupuesto a cambio de inmersión.",
+        "seoTitle": "Mejores Monitores Ultrawide 2026: Comparativa y Precios — ScreenScope",
+        "seoDescription": "Compara monitores ultrawide curvos de 34 y 49 pulgadas para productividad y gaming inmersivo, con ficha técnica completa y precios de Amazon.",
+        "keywords": "monitor ultrawide, monitor curvo 34 pulgadas, monitor 49 pulgadas, mejor monitor ultrawide 2026, monitor panorámico, monitor ultrawide gaming, monitor ultrawide oferta",
     },
 ]
 
@@ -166,7 +178,17 @@ def render_footer():
                      year=date.today().year, disclosure=esc(BRAND["disclosureShort"]))
 
 
-def page_shell(title, description, body, active_nav="", canonical="", extra_head="", extra_jsonld=""):
+def page_shell(title, description, body, active_nav="", canonical="", extra_head="", extra_jsonld="",
+               keywords="", image=""):
+    canonical_abs = SITE_URL + canonical if canonical else SITE_URL
+    image_abs = SITE_URL + (image or DEFAULT_OG_IMAGE) if (image or DEFAULT_OG_IMAGE) else ""
+    keywords_tag = '<meta name="keywords" content="{0}">'.format(esc(keywords)) if keywords else ""
+    image_tags = ""
+    if image_abs:
+        image_tags = (
+            '<meta property="og:image" content="{0}">\n'
+            '<meta name="twitter:image" content="{0}">'
+        ).format(esc(image_abs))
     return """<!doctype html>
 <html lang="es">
 <head>
@@ -174,7 +196,18 @@ def page_shell(title, description, body, active_nav="", canonical="", extra_head
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{description}">
+{keywords_tag}
 <link rel="canonical" href="{canonical}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{brand}">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{description}">
+<meta property="og:url" content="{canonical}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{description}">
+{image_tags}
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -194,7 +227,8 @@ def page_shell(title, description, body, active_nav="", canonical="", extra_head
 <script defer src="main.js?v={ver}"></script>
 {extra_jsonld}
 </body>
-</html>""".format(title=esc(title), description=esc(description), canonical=esc(canonical),
+</html>""".format(title=esc(title), description=esc(description), canonical=esc(canonical_abs),
+                   brand=esc(BRAND["name"]), keywords_tag=keywords_tag, image_tags=image_tags,
                    nav=render_nav(active_nav), body=body, footer=render_footer(), ver=VER,
                    extra_head=extra_head, extra_jsonld=extra_jsonld)
 
@@ -454,20 +488,39 @@ def render_ficha(p):
     return body
 
 
+def jsonld_script(*blocks):
+    return "\n".join(
+        '<script type="application/ld+json">{0}</script>'.format(json.dumps(b, ensure_ascii=False))
+        for b in blocks
+    )
+
+
+def build_jsonld_breadcrumb(crumbs):
+    """crumbs: [(name, path_or_'' )] — path relativo al sitio, vacio para el actual sin link."""
+    items = []
+    for i, (name, path) in enumerate(crumbs):
+        item = {"@type": "ListItem", "position": i + 1, "name": name}
+        if path:
+            item["item"] = SITE_URL + path
+        items.append(item)
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items}
+
+
 def build_jsonld_product(p):
     data = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": p["name"],
-        "brand": p.get("brand", ""),
-        "image": p["images"],
+        "brand": {"@type": "Brand", "name": p.get("brand") or BRAND["name"]},
+        "image": [SITE_URL + img for img in p.get("images", [])],
         "description": p.get("description", ""),
+        "category": CAT_LABEL.get(p["category"], p["category"]),
         "offers": {
             "@type": "Offer",
             "price": p.get("discountedPrice"),
             "priceCurrency": "EUR",
             "availability": "https://schema.org/InStock",
-            "url": p.get("canonical_url", ""),
+            "url": p.get("canonical_url") or (SITE_URL + product_href(p)),
         },
     }
     if p.get("avgRating"):
@@ -575,10 +628,19 @@ def build_index(products):
   {curio_row}
 </section>
 """.format(cards=cards, cat_cards=cat_cards, curio_row=curio_row)
+    website_jsonld = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": BRAND["name"],
+        "url": SITE_URL,
+        "description": BRAND["tagline"],
+    }
     html_out = page_shell(
-        "ScreenScope — Comparativas de Monitores Basadas en Datos Reales",
-        "Compara monitores gaming, de diseño y ultrawide lado a lado con puntuaciones editoriales, ficha técnica completa y precios de Amazon.",
+        "ScreenScope — Comparador de Monitores Gaming, Ultrawide y para Diseño (2026)",
+        "Compara monitores gaming, ultrawide y para diseño con precios reales de Amazon, puntuaciones por especificaciones y ficha técnica completa. Encuentra el mejor monitor para tu presupuesto en 2026.",
         body, active_nav="index.html", canonical="index.html",
+        keywords="monitores gaming, monitor ultrawide, monitor para diseño gráfico, comparador de monitores, mejor monitor 2026, monitor barato, ofertas monitores amazon, comparativa de monitores",
+        extra_jsonld=jsonld_script(website_jsonld),
     )
     write("index.html", html_out)
 
@@ -606,10 +668,21 @@ def build_category(cat, products):
   <div class="grid" data-products-grid>{cards}</div>
 </section>
 """.format(title=esc(cat["title"]), intro=esc(cat["intro"]), cards=cards)
+    breadcrumb = build_jsonld_breadcrumb([("Inicio", "index.html"), (cat["title"], "")])
+    item_list = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "url": SITE_URL + product_href(p), "name": p["name"]}
+            for i, p in enumerate(in_cat)
+        ],
+    }
     html_out = page_shell(
-        "{0} — ScreenScope".format(cat["title"]),
-        cat["intro"],
+        cat.get("seoTitle", "{0} — ScreenScope".format(cat["title"])),
+        cat.get("seoDescription", cat["intro"]),
         body, active_nav=cat["slug"], canonical=cat["slug"],
+        keywords=cat.get("keywords", ""),
+        extra_jsonld=jsonld_script(breadcrumb, item_list),
     )
     write(cat["slug"], html_out)
 
@@ -617,10 +690,31 @@ def build_category(cat, products):
 def build_fichas(products):
     for p in products:
         body = render_ficha(p)
+        cat = next((c for c in CATEGORIES if c["key"] == p["category"]), None)
+        cat_label = CAT_LABEL.get(p["category"], p["category"])
+        size_kw = None
+        if p.get("sizeInches"):
+            n = p["sizeInches"]
+            size_kw = "monitor {0} pulgadas".format(int(n) if n == int(n) else n)
+        refresh_kw = None
+        if p.get("refreshRateHz"):
+            refresh_kw = "monitor {0}hz".format(int(p["refreshRateHz"]))
+        keywords = ", ".join(filter(None, [
+            p.get("brand"), "monitor {0}".format(cat_label.lower()),
+            size_kw, p.get("panelType") and "panel {0}".format(p["panelType"]), refresh_kw,
+            "opiniones", "precio", "ficha técnica",
+        ]))
+        breadcrumb_crumbs = [("Inicio", "index.html")]
+        if cat:
+            breadcrumb_crumbs.append((cat["title"], cat["slug"]))
+        breadcrumb_crumbs.append((p["name"], ""))
         html_out = page_shell(
-            "{0} — Análisis Completo y Ficha Técnica — ScreenScope".format(p["name"]),
+            "{0}: Análisis, Ficha Técnica, Precio y Opiniones — ScreenScope".format(p["name"]),
             p.get("description", ""),
             body, active_nav="", canonical=product_href(p),
+            keywords=keywords,
+            image=(p["images"][0] if p.get("images") else ""),
+            extra_jsonld=jsonld_script(build_jsonld_breadcrumb(breadcrumb_crumbs)),
         )
         write(product_href(p), html_out)
 
@@ -652,9 +746,10 @@ def build_comparator():
 </section>
 """
     html_out = page_shell(
-        "Comparador de Monitores — ScreenScope",
-        "Compara monitores lado a lado: especificaciones, precio y puntuaciones editoriales.",
+        "Comparador de Monitores Online: Compara Especificaciones y Precios — ScreenScope",
+        "Compara hasta 4 monitores lado a lado: especificaciones, precio en Amazon y puntuaciones editoriales, gratis y sin registro.",
         body, active_nav="comparador.html", canonical="comparador.html",
+        keywords="comparador de monitores, comparar monitores online, comparativa monitores, especificaciones monitor, precio monitor amazon",
     )
     write("comparador.html", html_out)
 
@@ -673,8 +768,12 @@ def build_deals(products):
   <div class="grid">{cards}</div>
 </section>
 """.format(date=esc(date.today().isoformat()), cards=cards)
-    html_out = page_shell("Ofertas en Monitores — ScreenScope", "Monitores actualmente con descuento sobre su precio de lista.",
-                           body, active_nav="ofertas.html", canonical="ofertas.html")
+    html_out = page_shell(
+        "Ofertas y Descuentos en Monitores Hoy — ScreenScope",
+        "Monitores gaming, ultrawide y de diseño actualmente con descuento en Amazon, ordenados por el tamaño de la rebaja.",
+        body, active_nav="ofertas.html", canonical="ofertas.html",
+        keywords="ofertas monitores, descuentos monitores amazon, monitor barato oferta, chollos monitores",
+    )
     write("ofertas.html", html_out)
 
 
@@ -712,6 +811,7 @@ def build_guide(products):
         "Mejor Monitor Gaming 2026: Guía de Compra Basada en Especificaciones — ScreenScope",
         "Cómo elegir un monitor gaming por tasa de refresco, tiempo de respuesta y tecnología de sincronización, con una selección puntuada.",
         body, active_nav="guia-mejor-monitor-gaming-2026.html", canonical="guia-mejor-monitor-gaming-2026.html",
+        keywords="mejor monitor gaming 2026, guía monitor gaming, cómo elegir monitor gaming, monitor 144hz vs 240hz, tiempo de respuesta monitor, freesync vs gsync",
     )
     write("guia-mejor-monitor-gaming-2026.html", html_out)
 
@@ -787,6 +887,33 @@ def build_favicon():
     print("  wrote assets/img/favicon.svg")
 
 
+def build_sitemap(products):
+    today = date.today().isoformat()
+    urls = [("index.html", "1.0", "weekly")]
+    urls += [(cat["slug"], "0.9", "weekly") for cat in CATEGORIES]
+    urls += [
+        ("comparador.html", "0.8", "weekly"),
+        ("ofertas.html", "0.8", "daily"),
+        ("guia-mejor-monitor-gaming-2026.html", "0.8", "monthly"),
+    ]
+    urls += [(product_href(p), "0.7", "weekly") for p in products]
+    urls += [(path, "0.3", "yearly") for path in ("sobre-nosotros.html", "aviso-afiliados.html", "privacidad.html")]
+    entries = "".join(
+        "  <url><loc>{0}{1}</loc><lastmod>{2}</lastmod><changefreq>{3}</changefreq><priority>{4}</priority></url>\n"
+        .format(SITE_URL, path, today, freq, prio)
+        for path, prio, freq in urls
+    )
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+           + entries + "</urlset>\n")
+    write("sitemap.xml", xml)
+
+
+def build_robots():
+    txt = "User-agent: *\nAllow: /\n\nSitemap: {0}sitemap.xml\n".format(SITE_URL)
+    write("robots.txt", txt)
+
+
 def cleanup_old_pages():
     """Elimina los HTML generados con los slugs antiguos en inglés."""
     old = ["category-gaming.html", "category-design.html", "category-ultrawide.html",
@@ -809,11 +936,16 @@ def cleanup_stale_fichas(products):
 
 
 def main():
+    global DEFAULT_OG_IMAGE
     products = load_products()
     print("Generando ScreenScope ({0} productos)…".format(len(products)))
     cleanup_old_pages()
     cleanup_stale_fichas(products)
     build_favicon()
+    featured = next((p for p in products if p.get("isFeatured") and p.get("images")), None)
+    fallback = next((p for p in products if p.get("images")), None)
+    chosen = featured or fallback
+    DEFAULT_OG_IMAGE = chosen["images"][0] if chosen else ""
     build_db_js(products)
     build_index(products)
     for cat in CATEGORIES:
@@ -823,6 +955,8 @@ def main():
     build_deals(products)
     build_guide(products)
     build_legal_pages()
+    build_sitemap(products)
+    build_robots()
     print("\nListo. VER = {0}".format(VER))
 
 
