@@ -503,13 +503,8 @@ def load_curiosidades():
         return json.load(f)
 
 
-def render_curio_row():
-    items = load_curiosidades()
-    if not items:
-        return ""
-    c = items[0]
+def render_curio_widget(c):
     return """
-<div class="curio-row">
   <div class="curio-widget">
     <span class="curio-label">🔎 Encontrado por curiosidad</span>
     <img src="{img}" alt="{title}" loading="lazy">
@@ -517,11 +512,22 @@ def render_curio_row():
     <p class="curio-note">{note}</p>
     <p><span class="curio-price">{price}</span>&#9733; {rating}</p>
     <a class="btn btn-ghost btn-sm" href="{url}" target="_blank" rel="sponsored nofollow noopener">Ver en Amazon</a>
-  </div>
-</div>""".format(
+  </div>""".format(
         img=esc(c["image"]), title=esc(c["title"]), note=esc(c["note"]),
         price=esc(c["price"]), rating=c.get("avgRating", "—"), url=esc(c["affiliate_url"]),
     )
+
+
+def render_curio_row():
+    items = load_curiosidades()
+    if not items:
+        return ""
+    widgets = "".join(render_curio_widget(c) for c in items)
+    return """
+<div class="curio-section">
+  <span class="curio-section-label">🎲 Cosas curiosas que encontramos por el camino (nada que ver con monitores)</span>
+  <div class="curio-row">{widgets}</div>
+</div>""".format(widgets=widgets)
 
 
 def build_index(products):

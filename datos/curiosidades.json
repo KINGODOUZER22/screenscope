@@ -8,5 +8,45 @@
     "reviewCount": 11,
     "image": "assets/img/curiosidad-think-billionaire-1.webp",
     "affiliate_url": "https://amzn.to/4A6eF1P"
+  },
+  {
+    "id": "curio-lava",
+    "title": "WMF Element One — Máquina de burbujeo Lava",
+    "note": "El producto más caprichoso de los más vendidos en España: una lámpara de lava para el agua con gas.",
+    "price": "229,99 €",
+    "avgRating": 4.5,
+    "reviewCount": 89,
+    "image": "assets/img/curiosidad-lava-1.webp",
+    "affiliate_url": "https://www.amazon.es/dp/B0FMF6FMV1?tag=dozerid-21"
+  },
+  {
+    "id": "curio-pilas",
+    "title": "Amazon Basics — Pilas alcalinas AAA (36 uds.)",
+    "note": "El producto más reseñado de todo Amazon España: 851.567 valoraciones y contando.",
+    "price": "14,39 €",
+    "avgRating": 4.6,
+    "reviewCount": 851567,
+    "image": "assets/img/curiosidad-pilas-1.webp",
+    "affiliate_url": "https://www.amazon.es/dp/B00LH3DMUO?tag=dozerid-21"
+  },
+  {
+    "id": "curio-serum",
+    "title": "d'alba Piedmont — Double Serum All-in-one",
+    "note": "El sérum coreano viral que arrasa en los más vendidos de belleza en España.",
+    "price": "15,95 €",
+    "avgRating": 4.4,
+    "reviewCount": 9160,
+    "image": "assets/img/curiosidad-serum-1.webp",
+    "affiliate_url": "https://www.amazon.es/dp/B09SZ5JX2Y?tag=dozerid-21"
+  },
+  {
+    "id": "curio-mascarilla",
+    "title": "BIODANCE Bio-Collagen Real Deep Mask",
+    "note": "La mascarilla nocturna k-beauty con más fama del momento, también entre los más vendidos.",
+    "price": "14,51 €",
+    "avgRating": 4.6,
+    "reviewCount": 44793,
+    "image": "assets/img/curiosidad-mascarilla-1.webp",
+    "affiliate_url": "https://www.amazon.es/dp/B0B2RM68G2?tag=dozerid-21"
   }
 ]
