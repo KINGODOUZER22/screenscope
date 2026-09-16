@@ -181,6 +181,7 @@
   }
 
   var SPEC_ROWS = [
+    { key: "discountedPrice", label: "Precio", best: "min", format: fmtEUR },
     { key: "panelType", label: "Tipo de panel" },
     { key: "sizeInches", label: "Tamaño", unit: "\"", best: "max" },
     { key: "resolution", label: "Resolución" },
@@ -201,56 +202,79 @@
     if (!root) return;
     var ids = getCompareIds();
     var products = ids.map(productById).filter(Boolean);
-    var tableWrap = $("[data-compare-table-wrap]", root);
+    var wrap = $("[data-compare-wrap]", root);
     var empty = $("[data-compare-empty]", root);
     var radarWrap = $("[data-compare-radar]", root);
     if (!products.length) {
-      if (tableWrap) tableWrap.hidden = true;
+      if (wrap) wrap.hidden = true;
       if (radarWrap) radarWrap.hidden = true;
       if (empty) empty.hidden = false;
       return;
     }
     if (empty) empty.hidden = true;
-    if (tableWrap) tableWrap.hidden = false;
+    if (wrap) wrap.hidden = false;
     if (radarWrap) radarWrap.hidden = false;
 
-    var table = $("table", tableWrap);
-    var html = "<thead><tr><th>Producto</th>";
-    products.forEach(function (p) {
-      html += '<th class="compare-col-head"><img src="' + escHTML(p.images[0]) + '" alt="' + escHTML(p.name) + '">' +
-        '<div style="margin-top:.5rem"><a href="' + productHref(p) + '">' + escHTML(p.name) + "</a></div>" +
-        '<button class="compare-remove" data-remove="' + p.id + '">quitar</button></th>';
-    });
-    html += "</tr></thead><tbody>";
+    var cols = products.length;
+    var cardsEl = $("[data-compare-cards]", wrap);
+    var specsEl = $("[data-compare-specs]", wrap);
+    var verdictEl = $("[data-compare-verdict]", wrap);
 
-    html += "<tr><th>Precio</th>" + products.map(function (p) {
-      return "<td>" + fmtEUR(p.discountedPrice) + "</td>";
-    }).join("") + "</tr>";
+    cardsEl.style.setProperty("--cols", cols);
+    cardsEl.innerHTML = products.map(function (p) {
+      return '<div class="compare-card">' +
+        '<img src="' + escHTML(p.images[0]) + '" alt="' + escHTML(p.name) + '">' +
+        '<a class="compare-card-name" href="' + productHref(p) + '">' + escHTML(p.name) + "</a>" +
+        '<button class="compare-remove" data-remove="' + p.id + '">quitar</button></div>';
+    }).join("");
 
+    var winCounts = products.map(function () { return 0; });
+    var decided = 0;
+    var specsHtml = "";
     SPEC_ROWS.forEach(function (row) {
       var values = products.map(function (p) { return p[row.key]; });
       var best = null;
       if (row.best && values.every(function (v) { return typeof v === "number"; })) {
         best = row.best === "max" ? Math.max.apply(null, values) : Math.min.apply(null, values);
       }
-      html += "<tr><th>" + escHTML(row.label) + "</th>";
-      values.forEach(function (v) {
-        var display;
-        if (row.bool) display = v ? "Sí" : "No";
-        else if (v == null) display = "—";
-        else display = String(v).replace(".", ",") + (row.unit || "");
-        var cls = best !== null && v === best ? " compare-best" : "";
-        html += '<td class="' + cls.trim() + '">' + escHTML(display) + "</td>";
-      });
-      html += "</tr>";
+      if (best !== null) {
+        var winners = [];
+        values.forEach(function (v, i) { if (v === best) winners.push(i); });
+        if (winners.length === 1) { decided++; winCounts[winners[0]]++; }
+      }
+      specsHtml += '<div class="compare-spec-row"><span class="compare-spec-label">' + escHTML(row.label) + '</span>' +
+        '<div class="compare-spec-values" style="--cols:' + cols + '">' +
+        values.map(function (v) {
+          var display;
+          if (row.bool) display = v ? "Sí" : "No";
+          else if (v == null) display = "—";
+          else if (row.format) display = row.format(v);
+          else display = String(v).replace(".", ",") + (row.unit || "");
+          var cls = best !== null && v === best ? " is-best" : "";
+          return '<div class="compare-spec-value' + cls + '">' + escHTML(display) + "</div>";
+        }).join("") + "</div></div>";
     });
-    html += "<tr><th>Comprar</th>" + products.map(function (p) {
-      return '<td><a class="btn btn-primary btn-sm" href="' + escHTML(p.affiliate_url) + '" target="_blank" rel="sponsored nofollow noopener">Ver en Amazon</a></td>';
-    }).join("") + "</tr>";
-    html += "</tbody>";
-    table.innerHTML = html;
+    specsHtml += '<div class="compare-spec-row"><span class="compare-spec-label">Comprar</span>' +
+      '<div class="compare-spec-values" style="--cols:' + cols + '">' +
+      products.map(function (p) {
+        return '<a class="btn btn-primary btn-sm" href="' + escHTML(p.affiliate_url) + '" target="_blank" rel="sponsored nofollow noopener">Ver en Amazon</a>';
+      }).join("") + "</div></div>";
+    specsEl.style.setProperty("--cols", cols);
+    specsEl.innerHTML = specsHtml;
 
-    $$("[data-remove]", table).forEach(function (btn) {
+    if (verdictEl) {
+      if (products.length === 2 && decided > 0) {
+        var leadIdx = winCounts[0] >= winCounts[1] ? 0 : 1;
+        verdictEl.hidden = false;
+        verdictEl.innerHTML = '<p class="compare-verdict"><strong>' + escHTML(products[leadIdx].name) +
+          "</strong> va por delante en " + winCounts[leadIdx] + " de " + decided + " especificaciones comparables.</p>";
+      } else {
+        verdictEl.hidden = true;
+        verdictEl.innerHTML = "";
+      }
+    }
+
+    $$("[data-remove]", cardsEl).forEach(function (btn) {
       btn.addEventListener("click", function () { removeFromCompare(btn.getAttribute("data-remove")); });
     });
 

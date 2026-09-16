@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
-<link rel="stylesheet" href="styles.css?v=202609152058">
+<link rel="stylesheet" href="styles.css?v=202609152150">
 
 </head>
 <body>
@@ -49,8 +49,10 @@
   </div>
   <div data-comparator>
     <div class="compare-empty" data-compare-empty>Todavía no has seleccionado ningún monitor. Usa el desplegable de arriba, o pulsa "Comparar" en cualquier ficha o tarjeta de producto.</div>
-    <div class="compare-table-wrap" data-compare-table-wrap hidden>
-      <table class="compare-table"></table>
+    <div class="compare-wrap" data-compare-wrap hidden>
+      <div class="compare-cards" data-compare-cards></div>
+      <div data-compare-verdict hidden></div>
+      <div class="compare-specs" data-compare-specs></div>
     </div>
     <div class="compare-radar" data-compare-radar hidden>
       <h2>Comparativa de puntuaciones</h2>
@@ -87,9 +89,9 @@
     <button class="btn btn-primary btn-sm" type="button" data-cookie-accept>Aceptar</button>
   </div>
 </div>
-<script defer src="lib/manifest.js?v=202609152058"></script>
-<script defer src="lib/db.js?v=202609152058"></script>
-<script defer src="main.js?v=202609152058"></script>
+<script defer src="lib/manifest.js?v=202609152150"></script>
+<script defer src="lib/db.js?v=202609152150"></script>
+<script defer src="main.js?v=202609152150"></script>
 
 </body>
 </html>

@@ -226,15 +226,26 @@ details.specs-extra summary { cursor: pointer; font-weight: 600; }
 
 /* Comparator */
 .comparator-picker { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; margin-bottom: 1.6rem; }
-.comparator-picker select { background: var(--bg-card); color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: .6rem .8rem; }
-.compare-table-wrap { overflow-x: auto; overflow-y: visible; }
-.compare-table { min-width: 640px; }
-.compare-table th, .compare-table td { padding: .7rem .9rem; border-bottom: 1px solid var(--line); font-size: .9rem; white-space: nowrap; }
-.compare-table th:first-child, .compare-table td:first-child { position: sticky; left: 0; background: var(--bg); white-space: normal; min-width: 160px; }
-.compare-col-head { text-align: center; }
-.compare-col-head img { width: 90px; height: 68px; object-fit: cover; border-radius: 8px; margin-inline: auto; }
-.compare-remove { display: block; margin-inline: auto; margin-top: .4rem; font-size: .78rem; color: var(--bad); }
-.compare-best { color: var(--good); font-weight: 700; }
+.comparator-picker select { max-width: 100%; background: var(--bg-card); color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: .6rem .8rem; }
+.compare-cards { display: grid; grid-template-columns: repeat(var(--cols, 2), minmax(0, 1fr)); gap: .8rem; margin-bottom: .6rem; overflow-x: auto; }
+.compare-card { min-width: 0; text-align: center; background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: .9rem .6rem; }
+.compare-card img { display: block; width: 100%; min-width: 0; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; }
+.compare-card-name { display: block; margin-top: .5rem; font-weight: 600; font-size: .86rem; line-height: 1.3; }
+.compare-remove { display: block; margin-inline: auto; margin-top: .4rem; font-size: .78rem; color: var(--bad); background: none; border: none; cursor: pointer; }
+.compare-verdict {
+  margin: 1rem 0; padding: .9rem 1rem; text-align: center; font-size: .92rem;
+  border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--bg-card);
+}
+.compare-specs { display: flex; flex-direction: column; }
+.compare-spec-row { padding-block: .7rem; border-bottom: 1px solid var(--line); }
+.compare-spec-label {
+  display: block; font-family: var(--mono); font-size: .68rem; letter-spacing: .04em;
+  text-transform: uppercase; color: var(--text-mute); margin-bottom: .4rem;
+}
+.compare-spec-values { display: grid; grid-template-columns: repeat(var(--cols, 2), minmax(0, 1fr)); gap: .6rem; align-items: center; }
+.compare-spec-value { min-width: 0; font-size: .9rem; text-align: center; word-break: break-word; }
+.compare-spec-value.is-best { color: var(--good); font-weight: 700; }
+.compare-spec-values .btn { width: 100%; text-align: center; }
 .compare-radar { margin-top: 2.2rem; }
 .compare-empty { padding: 2.4rem; text-align: center; color: var(--text-dim); border: 1px dashed var(--line); border-radius: var(--radius); }
 

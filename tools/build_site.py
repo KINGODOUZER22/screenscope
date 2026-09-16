@@ -746,8 +746,10 @@ def build_comparator():
   </div>
   <div data-comparator>
     <div class="compare-empty" data-compare-empty>Todavía no has seleccionado ningún monitor. Usa el desplegable de arriba, o pulsa "Comparar" en cualquier ficha o tarjeta de producto.</div>
-    <div class="compare-table-wrap" data-compare-table-wrap hidden>
-      <table class="compare-table"></table>
+    <div class="compare-wrap" data-compare-wrap hidden>
+      <div class="compare-cards" data-compare-cards></div>
+      <div data-compare-verdict hidden></div>
+      <div class="compare-specs" data-compare-specs></div>
     </div>
     <div class="compare-radar" data-compare-radar hidden>
       <h2>Comparativa de puntuaciones</h2>
