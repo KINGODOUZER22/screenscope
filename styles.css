@@ -166,6 +166,15 @@ h3 { font-size: 1.2rem; }
   font-size: .82rem; color: var(--text-mute); line-height: 1.6;
 }
 
+.cookie-banner {
+  position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 60;
+  max-width: 680px; margin: 0 auto; background: var(--bg-card); border: 1px solid var(--line);
+  border-radius: var(--radius-sm); padding: 1rem 1.2rem; box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; justify-content: space-between;
+}
+.cookie-banner p { font-size: .82rem; color: var(--text-dim); margin: 0; flex: 1 1 260px; }
+.cookie-banner .cookie-actions { display: flex; gap: .5rem; flex: 0 0 auto; }
+
 /* Spec table */
 .spec-table { font-size: .92rem; }
 .spec-table th, .spec-table td { text-align: left; padding: .6rem .8rem; border-bottom: 1px solid var(--line); }

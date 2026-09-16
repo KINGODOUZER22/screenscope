@@ -29,6 +29,7 @@ BRAND = {
 
 SITE_URL = "https://kingodouzer22.github.io/screenscope/"
 DEFAULT_OG_IMAGE = ""  # se rellena en main() con la imagen de un producto destacado
+GA_MEASUREMENT_ID = "G-YR1FQ2PCWX"
 
 NAV = [
     ("Inicio", "index.html"),
@@ -178,6 +179,17 @@ def render_footer():
                      year=date.today().year, disclosure=esc(BRAND["disclosureShort"]))
 
 
+def render_cookie_banner():
+    return """
+<div class="cookie-banner" data-cookie-banner hidden>
+  <p>Usamos Google Analytics para saber cuántas visitas recibe ScreenScope — no identifica a nadie personalmente. Puedes aceptarlo o rechazarlo; más info en la <a href="privacidad.html">política de privacidad</a>.</p>
+  <div class="cookie-actions">
+    <button class="btn btn-ghost btn-sm" type="button" data-cookie-reject>Rechazar</button>
+    <button class="btn btn-primary btn-sm" type="button" data-cookie-accept>Aceptar</button>
+  </div>
+</div>"""
+
+
 def page_shell(title, description, body, active_nav="", canonical="", extra_head="", extra_jsonld="",
                keywords="", image=""):
     canonical_abs = SITE_URL + canonical if canonical else SITE_URL
@@ -222,6 +234,7 @@ def page_shell(title, description, body, active_nav="", canonical="", extra_head
 {body}
 </main>
 {footer}
+{cookie_banner}
 <script defer src="lib/manifest.js?v={ver}"></script>
 <script defer src="lib/db.js?v={ver}"></script>
 <script defer src="main.js?v={ver}"></script>
@@ -230,6 +243,7 @@ def page_shell(title, description, body, active_nav="", canonical="", extra_head
 </html>""".format(title=esc(title), description=esc(description), canonical=esc(canonical_abs),
                    brand=esc(BRAND["name"]), keywords_tag=keywords_tag, image_tags=image_tags,
                    nav=render_nav(active_nav), body=body, footer=render_footer(), ver=VER,
+                   cookie_banner=render_cookie_banner(),
                    extra_head=extra_head, extra_jsonld=extra_jsonld)
 
 
@@ -854,9 +868,11 @@ def build_legal_pages():
   <div class="legal-body">
     <span class="eyebrow">Legal</span>
     <h1 style="color:var(--text)">Política de Privacidad</h1>
-    <p>Esta web no requiere crear una cuenta y no recoge información personal más allá de analíticas web anónimas estándar que puedan añadirse más adelante (visitas, páginas vistas, ubicación aproximada a partir de la IP).</p>
+    <p>Esta web no requiere crear una cuenta. La única información que recogemos son analíticas de visitas mediante Google Analytics, y solo si das tu consentimiento en el aviso de cookies.</p>
     <h2>Cookies</h2>
-    <p>Tu selección en el comparador se guarda localmente en tu navegador (localStorage), no en un servidor, y nunca se comparte. Esta web no establece cookies de seguimiento propias; Amazon puede establecer sus propias cookies en cuanto haces clic hacia amazon.es, según la política de privacidad propia de Amazon.</p>
+    <p>Tu selección en el comparador se guarda localmente en tu navegador (localStorage), no en un servidor, y nunca se comparte.</p>
+    <p>Si aceptas el aviso de cookies, activamos <strong>Google Analytics</strong> para saber cuántas visitas recibe la web, qué páginas se ven más y desde qué país, con la IP anonimizada. Estos datos son agregados y no identifican a ninguna persona. Si rechazas el aviso, o no respondes, Google Analytics no se activa. Puedes cambiar tu decisión en cualquier momento borrando los datos de este sitio en la configuración de tu navegador.</p>
+    <p>Amazon puede establecer sus propias cookies en cuanto haces clic hacia amazon.es, según la política de privacidad propia de Amazon.</p>
     <h2>Contacto</h2>
     <p>Las preguntas sobre esta política pueden enviarse al propietario de la web.</p>
   </div>

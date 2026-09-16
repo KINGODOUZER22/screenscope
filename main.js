@@ -320,6 +320,50 @@
   }
 
   // ---------------------------------------------------------------
+  // Cookies de analítica (Google Analytics) — solo se cargan con consentimiento
+  // ---------------------------------------------------------------
+  var COOKIE_CONSENT_KEY = "cookieConsent";
+
+  function loadGoogleAnalytics() {
+    var gaId = brand.gaMeasurementId;
+    if (!gaId || window.__gaLoaded) return;
+    window.__gaLoaded = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + gaId;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", gaId, { anonymize_ip: true });
+  }
+
+  function initCookieConsent() {
+    var banner = $("[data-cookie-banner]");
+    if (!banner) return;
+    var stored = null;
+    try { stored = localStorage.getItem(COOKIE_CONSENT_KEY); } catch (e) {}
+    if (stored === "accepted") { loadGoogleAnalytics(); return; }
+    if (stored === "rejected") { return; }
+    banner.hidden = false;
+    var acceptBtn = $("[data-cookie-accept]", banner);
+    var rejectBtn = $("[data-cookie-reject]", banner);
+    if (acceptBtn) {
+      acceptBtn.addEventListener("click", function () {
+        try { localStorage.setItem(COOKIE_CONSENT_KEY, "accepted"); } catch (e) {}
+        banner.hidden = true;
+        loadGoogleAnalytics();
+      });
+    }
+    if (rejectBtn) {
+      rejectBtn.addEventListener("click", function () {
+        try { localStorage.setItem(COOKIE_CONSENT_KEY, "rejected"); } catch (e) {}
+        banner.hidden = true;
+      });
+    }
+  }
+
+  // ---------------------------------------------------------------
   // Boot
   // ---------------------------------------------------------------
   function boot() {
@@ -330,6 +374,7 @@
     safe(initComparatorPicker, "initComparatorPicker");
     safe(renderComparator, "renderComparator");
     safe(initCategoryFilters, "initCategoryFilters");
+    safe(initCookieConsent, "initCookieConsent");
     document.documentElement.classList.add("is-ready");
   }
 
