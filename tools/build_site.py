@@ -631,6 +631,9 @@ def build_index(products):
     <h2>Monitores que merece la pena mirar ahora mismo</h2>
   </div>
   <div class="grid">{cards}</div>
+  <div class="section-cta">
+    <a class="btn btn-ghost" href="todos-los-monitores.html">Ver más monitores</a>
+  </div>
 </section>
 
 <section class="section container">
@@ -699,6 +702,45 @@ def build_category(cat, products):
         extra_jsonld=jsonld_script(breadcrumb, item_list),
     )
     write(cat["slug"], html_out)
+
+
+def build_all_products(products):
+    cards = "".join(render_card(p) for p in products)
+    body = """
+<section class="section container" data-filterable>
+  <div class="section-head">
+    <span class="eyebrow">Catálogo completo</span>
+    <h1>Todos los monitores</h1>
+    <p>Los {count} monitores de ScreenScope en un único listado — gaming, diseño y ultrawide juntos. Usa el orden por precio o valoración para encontrar el tuyo más rápido.</p>
+  </div>
+  <div class="filters">
+    <select data-sort aria-label="Ordenar por">
+      <option value="">Ordenar por…</option>
+      <option value="price-asc">Precio: de menor a mayor</option>
+      <option value="price-desc">Precio: de mayor a menor</option>
+      <option value="rating-desc">Valoración: de mayor a menor</option>
+    </select>
+  </div>
+  <div class="grid" data-products-grid>{cards}</div>
+</section>
+""".format(count=len(products), cards=cards)
+    item_list = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "url": SITE_URL + product_href(p), "name": p["name"]}
+            for i, p in enumerate(products)
+        ],
+    }
+    breadcrumb = build_jsonld_breadcrumb([("Inicio", "index.html"), ("Todos los monitores", "")])
+    html_out = page_shell(
+        "Todos los Monitores: Catálogo Completo con Precios — ScreenScope",
+        "Explora los {0} monitores de ScreenScope en un único listado — gaming, diseño y ultrawide — con precio real de Amazon y puntuaciones por especificación.".format(len(products)),
+        body, active_nav="", canonical="todos-los-monitores.html",
+        keywords="todos los monitores, catálogo de monitores, comparativa monitores 2026",
+        extra_jsonld=jsonld_script(breadcrumb, item_list),
+    )
+    write("todos-los-monitores.html", html_out)
 
 
 def build_fichas(products):
@@ -911,6 +953,7 @@ def build_sitemap(products):
     urls += [(cat["slug"], "0.9", "weekly") for cat in CATEGORIES]
     urls += [
         ("comparador.html", "0.8", "weekly"),
+        ("todos-los-monitores.html", "0.8", "weekly"),
         ("ofertas.html", "0.8", "daily"),
         ("guia-mejor-monitor-gaming-2026.html", "0.8", "monthly"),
     ]
@@ -968,6 +1011,7 @@ def main():
     build_index(products)
     for cat in CATEGORIES:
         build_category(cat, products)
+    build_all_products(products)
     build_fichas(products)
     build_comparator()
     build_deals(products)

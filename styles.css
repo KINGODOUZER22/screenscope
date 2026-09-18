@@ -73,6 +73,7 @@ table { border-collapse: collapse; width: 100%; }
 .section { padding-block: clamp(2.6rem, 6vw, 5rem); }
 .section-head { max-width: 60ch; margin-bottom: 2rem; }
 .section-head p { color: var(--text-dim); margin-top: .5rem; }
+.section-cta { display: flex; justify-content: center; margin-top: 2.2rem; }
 .eyebrow {
   display: inline-block; font-family: var(--mono); font-size: .78rem; letter-spacing: .08em;
   text-transform: uppercase; color: var(--accent); margin-bottom: .6rem;
