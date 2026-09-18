@@ -4315,5 +4315,404 @@
         "text": "Compré este monitor buscando dar el salto definitivo en calidad visual y rendimiento para gaming, y ha superado todas mis expectativas.Lo que más destaca es su panel QD-OLED de 5.ª generación, la nitidez del texto ha mejorado drásticamente respecto a generaciones anteriores (ya n"
       }
     ]
+  },
+  {
+    "id": "philips-24e1n1100a",
+    "asin": "B0CX9CT3ZF",
+    "name": "PHILIPS 24E1N1100A",
+    "brand": "PHILIPS",
+    "affiliate_url": "https://www.amazon.es/dp/B0CX9CT3ZF?tag=dozerid-21",
+    "affiliate_tag": "dozerid-21",
+    "canonical_url": "https://www.amazon.es/dp/B0CX9CT3ZF",
+    "images": [
+      "assets/img/philips-24e1n1100a-1.webp",
+      "assets/img/philips-24e1n1100a-2.webp",
+      "assets/img/philips-24e1n1100a-3.webp"
+    ],
+    "category": "Gaming",
+    "isFeatured": false,
+    "showInTopMenu": false,
+    "retailPrice": 99.0,
+    "discountedPrice": 78.95,
+    "priceRange": "budget",
+    "avgRating": 4.5,
+    "reviewCount": 3217,
+    "priceCapturedAt": "2026-09-18",
+    "panelType": "IPS",
+    "sizeInches": 23.8,
+    "resolution": "1080p",
+    "refreshRateHz": 120,
+    "responseTimeMs": 4,
+    "brightnessNits": 250,
+    "hdr": null,
+    "curved": false,
+    "curvatureRadius": null,
+    "syncTech": "FreeSync",
+    "heightAdjustable": false,
+    "pivot": false,
+    "weightKg": null,
+    "warrantyYears": null,
+    "specsExtra": {
+      "Modelo": "24E1N1100A/00",
+      "Conexiones": "1x HDMI 1.4, 1x D-SUB (VGA)",
+      "Contraste": "1300:1",
+      "Altavoces": "2x 2W"
+    },
+    "scoreSharpness": 2,
+    "scoreSmoothness": 2,
+    "scoreColorHdr": 2,
+    "scoreErgonomics": 2,
+    "scoreGaming": 6,
+    "scoreValue": 7,
+    "description": "Un monitor de 24 pulgadas IPS con 120Hz que ahora mismo tiene un 20% de descuento en Amazon España, bajando de 99€ a 78,95€. Con más de 3.200 valoraciones y 4,5 estrellas, es de los monitores con más recorrido de venta de esta comparativa.",
+    "editorialBody": "<p>El 24E1N1100A es la versión más pequeña de la familia Philips que también incluye el 27E1N1100A de esta misma comparativa: mismo concepto (panel IPS, 120Hz, FreeSync, precio ajustado), pero en un formato de 23,8\" más compacto para escritorios pequeños o como segunda pantalla.</p><p>Los compradores destacan sobre todo la relación calidad-precio y que la imagen se ve nítida para un uso de oficina o consumo de contenido diario; varias reseñas mencionan que llevan años usándolo sin fallos. El resumen de opiniones generado a partir de las reseñas de Amazon señala como punto débil recurrente los altavoces integrados, descritos como flojos a volumen alto — coherente con lo que ya se observa en el resto de monitores económicos de la marca.</p><p>Es una compra sensata si buscas simplemente una pantalla más fluida que un monitor de oficina estándar de 60Hz, sin pagar de más por extras que no vas a usar.</p>",
+    "pros": [
+      "20% de descuento activo sobre su precio recomendado de 99€",
+      "Más de 3.200 valoraciones reales con 4,5 estrellas de media",
+      "120Hz y FreeSync a un precio de monitor de oficina"
+    ],
+    "cons": [
+      "Altavoces integrados de volumen bajo, según varias reseñas",
+      "Soporte fijo, sin ajuste de altura",
+      "Sin HDR ni DisplayPort (solo HDMI y VGA)"
+    ],
+    "idealFor": "Quien quiere una pantalla secundaria o de oficina compacta, más fluida que un monitor de 60Hz, sin gastar de más.",
+    "editorPick": "La opción más pequeña y barata de la gama Philips 120Hz de esta comparativa.",
+    "reviewsSummary": "Con 3.217 valoraciones y 4,5 estrellas, los compradores destacan la buena relación calidad-precio y una imagen nítida para el día a día; el punto débil que más se repite es el volumen bajo de los altavoces integrados.",
+    "reviews": [
+      {
+        "author": "Antonio",
+        "stars": 5,
+        "text": "Es una pantalla grande y se ve muy bien. Además lleva altavoces integrados. Merece la pena."
+      },
+      {
+        "author": "Ana",
+        "stars": 5,
+        "text": "Después de 3 años de uso en la sala de profesores, muy buen producto. Ningún fallo y se ve muy bien. Es muy cómodo tener altavoces integrados."
+      },
+      {
+        "author": "Paula",
+        "stars": 4,
+        "text": "Le pongo 4 estrellas porque la calidad de la pantalla me parece un poco “mate”, pero en calidad-precio cumple perfectamente su función."
+      }
+    ],
+    "sample": false
+  },
+  {
+    "id": "lenovo-legion-27q-10",
+    "asin": "B0FLQ62BSG",
+    "name": "Lenovo Legion 27Q-10",
+    "brand": "Lenovo",
+    "affiliate_url": "https://www.amazon.es/dp/B0FLQ62BSG?tag=dozerid-21",
+    "affiliate_tag": "dozerid-21",
+    "canonical_url": "https://www.amazon.es/dp/B0FLQ62BSG",
+    "images": [
+      "assets/img/lenovo-legion-27q-10-1.webp",
+      "assets/img/lenovo-legion-27q-10-2.webp",
+      "assets/img/lenovo-legion-27q-10-3.webp"
+    ],
+    "category": "Gaming",
+    "isFeatured": true,
+    "showInTopMenu": false,
+    "retailPrice": 229.99,
+    "discountedPrice": 169.99,
+    "priceRange": "mid",
+    "avgRating": 4.4,
+    "reviewCount": 72,
+    "priceCapturedAt": "2026-09-18",
+    "panelType": "IPS",
+    "sizeInches": 27,
+    "resolution": "1440p",
+    "refreshRateHz": 240,
+    "responseTimeMs": 0.5,
+    "brightnessNits": null,
+    "hdr": null,
+    "curved": false,
+    "curvatureRadius": null,
+    "syncTech": "FreeSync+G-Sync",
+    "heightAdjustable": true,
+    "pivot": true,
+    "weightKg": null,
+    "warrantyYears": null,
+    "specsExtra": {
+      "Cobertura de color": "99% sRGB, 90% DCI-P3",
+      "Conexiones": "2x HDMI 2.1, 1x DisplayPort 1.4",
+      "Ajustes de soporte": "Inclinación, altura, pivote y giro"
+    },
+    "scoreSharpness": 4,
+    "scoreSmoothness": 8,
+    "scoreColorHdr": 6,
+    "scoreErgonomics": 9,
+    "scoreGaming": 10,
+    "scoreValue": 7,
+    "description": "Un monitor gaming QHD de 27\" y 240Hz con soporte NVIDIA G-Sync y AMD FreeSync Premium a la vez, actualmente con un 26% de descuento (de 229,99€ a 169,99€). El salto de resolución y de Hz respecto a un monitor de entrada se nota especialmente en color y fluidez.",
+    "editorialBody": "<p>El Legion 27Q-10 apunta a quien ya tiene un monitor Full HD de gama de entrada y quiere el siguiente paso: resolución QHD, 240Hz reales y un soporte completamente ajustable (altura, inclinación, pivote y giro), algo que en esta franja de precio no siempre se incluye.</p><p>Las reseñas en España coinciden en que el salto de calidad de imagen y color es notable frente a un panel 1080p, con buena cobertura de color (99% sRGB, 90% DCI-P3) para lo que cuesta. También hay algún caso puntual de unidad con un píxel muerto o fuga de luz, y un comprador señala que no es compatible con el VRR de PS5 pese a lo indicado en el anuncio — algo a tener en cuenta si el uso principal es en consola en lugar de PC.</p><p>Para PC gaming con tarjeta Nvidia o AMD, es de las opciones más completas de esta comparativa en su rango de precio.</p>",
+    "pros": [
+      "240Hz con 0,5ms de tiempo de respuesta y doble compatibilidad G-Sync/FreeSync Premium",
+      "Soporte totalmente ajustable: altura, inclinación, pivote y giro",
+      "26% de descuento sobre su precio recomendado"
+    ],
+    "cons": [
+      "Un comprador reportó un píxel muerto y fuga de luz en su unidad",
+      "No es compatible con el VRR de PS5 según un comprador, pese a lo indicado en el anuncio",
+      "Sin certificación HDR oficial"
+    ],
+    "idealFor": "Gamers de PC que quieren dar el salto de 1080p a QHD 240Hz con un soporte ergonómico completo.",
+    "editorPick": "El más rápido de la comparativa en Hz y tiempo de respuesta entre los añadidos en esta ronda de ofertas.",
+    "reviewsSummary": "Con 72 valoraciones y 4,4 estrellas, los compradores destacan el salto de color y nitidez al pasar de 1080p a 1440p; hay algún caso aislado de unidad defectuosa (píxel muerto, fuga de luz) y una queja puntual sobre compatibilidad VRR con PS5.",
+    "reviews": [
+      {
+        "author": "Lord Pila",
+        "stars": 5,
+        "text": "Dar el salto de 1080p a 1440p es una experiencia maravillosa, el color es bueno y nítido."
+      },
+      {
+        "author": "SentinelD",
+        "stars": 5,
+        "text": "Monitor WQHD de calidad, buena relación de gamma de colores y viene bien configurado desde el principio. Estéticamente parece más robusto y con mejores materiales."
+      },
+      {
+        "author": "Guti",
+        "stars": 3,
+        "text": "El monitor está bien en cuanto a prestaciones. Pero lo devolví porque tenía un píxel muerto en el centro de la pantalla y fugas de luz en una esquina."
+      }
+    ],
+    "sample": false
+  },
+  {
+    "id": "dell-s2425hsm",
+    "asin": "B0FQ5F2QSQ",
+    "name": "DELL 24 Plus S2425HSM",
+    "brand": "Dell",
+    "affiliate_url": "https://www.amazon.es/dp/B0FQ5F2QSQ?tag=dozerid-21",
+    "affiliate_tag": "dozerid-21",
+    "canonical_url": "https://www.amazon.es/dp/B0FQ5F2QSQ",
+    "images": [
+      "assets/img/dell-s2425hsm-1.webp",
+      "assets/img/dell-s2425hsm-2.webp",
+      "assets/img/dell-s2425hsm-3.webp"
+    ],
+    "category": "Gaming",
+    "isFeatured": false,
+    "showInTopMenu": false,
+    "retailPrice": 139.0,
+    "discountedPrice": 106.18,
+    "priceRange": "budget",
+    "avgRating": 4.4,
+    "reviewCount": 316,
+    "priceCapturedAt": "2026-09-18",
+    "panelType": "IPS",
+    "sizeInches": 23.8,
+    "resolution": "1080p",
+    "refreshRateHz": 144,
+    "responseTimeMs": 1,
+    "brightnessNits": 300,
+    "hdr": null,
+    "curved": false,
+    "curvatureRadius": null,
+    "syncTech": "FreeSync",
+    "heightAdjustable": true,
+    "pivot": true,
+    "weightKg": null,
+    "warrantyYears": 3.0,
+    "specsExtra": {
+      "Modelo": "S2425HSM",
+      "Cobertura de color": "99% sRGB",
+      "Ajustes de soporte": "Altura 110mm, inclinación -5°/+21°, giro ±30°, pivot ±90°",
+      "Certificación": "TÜV Eye Comfort 4 estrellas",
+      "Conexiones": "2x HDMI"
+    },
+    "scoreSharpness": 2,
+    "scoreSmoothness": 3,
+    "scoreColorHdr": 2,
+    "scoreErgonomics": 9,
+    "scoreGaming": 7,
+    "scoreValue": 7,
+    "description": "Un monitor Dell de 24\" con 144Hz, 1ms y soporte totalmente ajustable (altura, giro, pivote), con un 24% de descuento sobre su precio recomendado de 139€ y 3 años de garantía oficial del fabricante.",
+    "editorialBody": "<p>El S2425HSM cubre el hueco de \"monitor de marca reconocida, ergonomía completa y buen precio\": panel IPS Full HD con 144Hz y 1ms MPRT, certificación TÜV Eye Comfort de 4 estrellas y un soporte con ajuste de altura de 110mm además de inclinación, giro y pivote — algo poco habitual por debajo de 110€.</p><p>Las opiniones de compradores coinciden en la buena calidad de imagen y en lo sencillo de instalar. El punto más discutido son los altavoces integrados: mientras algunos compradores los consideran mejores que los de otros monitores con altavoces incorporados, otro los describe como muy deficientes en la reproducción de graves — conviene no depender de ellos si el sonido es prioritario.</p><p>Con 3 años de garantía de Dell y un 24% de descuento activo, es de las opciones con mejor respaldo de marca de este lote de ofertas.</p>",
+    "pros": [
+      "Soporte con ajuste de altura, inclinación, giro y pivote — poco frecuente en esta franja de precio",
+      "3 años de garantía oficial de Dell",
+      "144Hz, 1ms MPRT y certificación TÜV Eye Comfort"
+    ],
+    "cons": [
+      "Opiniones divididas sobre la calidad de sus altavoces integrados",
+      "Sin HDR ni USB-C",
+      "Brillo de 300 nits, correcto pero no destacado"
+    ],
+    "idealFor": "Quien quiere un monitor de marca reconocida con ergonomía completa y garantía larga, sin pagar precio premium.",
+    "editorPick": "El más ergonómico (altura + pivote) de las incorporaciones de esta ronda de ofertas.",
+    "reviewsSummary": "Con 316 valoraciones y 4,4 estrellas, los compradores destacan la buena imagen y la facilidad de instalación; la calidad de los altavoces integrados genera opiniones muy dispares, desde \"mejor que otros\" hasta \"el peor sonido que he escuchado\".",
+    "reviews": [
+      {
+        "author": "Josep Mª Prat",
+        "stars": 5,
+        "text": "Es un monitor con una muy buena imagen en la pantalla y con unos altavoces que dan un sonido mejor que otros con altavoces incorporados. Muy fácil y completo para instalar."
+      },
+      {
+        "author": "ANTONIO JAVIER MIGUEZ GONZALEZ",
+        "stars": 5,
+        "text": "Muy buen producto."
+      },
+      {
+        "author": "Manuel Sanchez Hervas",
+        "stars": 1,
+        "text": "El sonido es pésimo, suena sobrecargado de graves, imposible de solucionar aun ajustando el ecualizador."
+      }
+    ],
+    "sample": false
+  },
+  {
+    "id": "msi-mp275qa-e14",
+    "asin": "B0FWCLJ51V",
+    "name": "MSI Pro MP275QA E14",
+    "brand": "MSI",
+    "affiliate_url": "https://www.amazon.es/dp/B0FWCLJ51V?tag=dozerid-21",
+    "affiliate_tag": "dozerid-21",
+    "canonical_url": "https://www.amazon.es/dp/B0FWCLJ51V",
+    "images": [
+      "assets/img/msi-mp275qa-e14-1.webp",
+      "assets/img/msi-mp275qa-e14-2.webp",
+      "assets/img/msi-mp275qa-e14-3.webp"
+    ],
+    "category": "Gaming",
+    "isFeatured": false,
+    "showInTopMenu": false,
+    "retailPrice": 171.99,
+    "discountedPrice": 129.0,
+    "priceRange": "budget",
+    "avgRating": 4.9,
+    "reviewCount": 26,
+    "priceCapturedAt": "2026-09-18",
+    "panelType": "IPS",
+    "sizeInches": 27,
+    "resolution": "1440p",
+    "refreshRateHz": 144,
+    "responseTimeMs": 1,
+    "brightnessNits": 300,
+    "hdr": null,
+    "curved": false,
+    "curvatureRadius": null,
+    "syncTech": "FreeSync",
+    "heightAdjustable": false,
+    "pivot": false,
+    "weightKg": null,
+    "warrantyYears": null,
+    "specsExtra": {
+      "Cobertura de color": ">115% sRGB (8 bits + FRC)",
+      "Certificación": "TÜV Rheinland Eye Comfort",
+      "Conexiones": "HDMI 2.0b, DisplayPort 1.2a",
+      "Montaje": "VESA 100mm"
+    },
+    "scoreSharpness": 4,
+    "scoreSmoothness": 3,
+    "scoreColorHdr": 3,
+    "scoreErgonomics": 2,
+    "scoreGaming": 7,
+    "scoreValue": 7,
+    "description": "Un monitor WQHD de 27\" y 144Hz en \"oferta flash\" con un 25% de descuento (de 171,99€ a 129€), con más de 115% de cobertura sRGB y certificación TÜV de confort visual.",
+    "editorialBody": "<p>El MP275QA E14 ofrece resolución WQHD y 144Hz por debajo de los 130€ en su oferta flash actual, con una cobertura de color por encima del 115% sRGB que en las reseñas se traduce en colores que varios compradores describen como \"vibrantes\" y una imagen \"muy nítida\" para trabajo y juego.</p><p>Al ser un lanzamiento reciente todavía tiene pocas valoraciones (26), aunque todas ellas son muy positivas (4,9 sobre 5) y coinciden en un montaje rápido y una buena relación calidad-precio. El soporte solo permite inclinación, sin ajuste de altura ni pivote, lo que compensa en parte su precio ajustado para esta resolución.</p><p>Recomendable para quien prioriza resolución y color sobre ergonomía del soporte.</p>",
+    "pros": [
+      "WQHD 144Hz con más de 115% de cobertura sRGB a precio de entrada",
+      "25% de descuento en oferta flash activa",
+      "4,9 estrellas en sus primeras valoraciones"
+    ],
+    "cons": [
+      "Solo 26 valoraciones por ser un lanzamiento reciente",
+      "Soporte solo con inclinación, sin ajuste de altura ni pivote",
+      "Sin certificación HDR oficial pese a anunciarse \"compatible con HDR\""
+    ],
+    "idealFor": "Quien quiere dar el salto a WQHD 144Hz con buen color, sin gastar en un soporte ergonómico que no va a usar.",
+    "editorPick": "La mejor relación resolución/precio de este lote: WQHD 144Hz por debajo de 130€.",
+    "reviewsSummary": "Con solo 26 valoraciones por ser un modelo reciente, pero una media de 4,9 estrellas, los compradores destacan la nitidez de imagen, el color y lo rápido del montaje.",
+    "reviews": [
+      {
+        "author": "Audrey",
+        "stars": 5,
+        "text": "El tamaño de pantalla de 27 pulgadas combinado con la resolución 1440p da una imagen muy nítida y mucho espacio para multitarea. Los colores se ven vibrantes y el 144Hz hace que todo se sienta muy fluido."
+      },
+      {
+        "author": "Daniel Garcia",
+        "stars": 5,
+        "text": "Fantástica pantalla, fácil de montar y calidad."
+      },
+      {
+        "author": "Aristide",
+        "stars": 5,
+        "text": "Por el precio, una locura; tenía un 1080p de 23,8\" y el cambio a 2K de 27\" es brutal."
+      }
+    ],
+    "sample": false
+  },
+  {
+    "id": "lg-32mr50c-b",
+    "asin": "B0CKRVB58D",
+    "name": "LG 32MR50C-B",
+    "brand": "LG",
+    "affiliate_url": "https://www.amazon.es/dp/B0CKRVB58D?tag=dozerid-21",
+    "affiliate_tag": "dozerid-21",
+    "canonical_url": "https://www.amazon.es/dp/B0CKRVB58D",
+    "images": [
+      "assets/img/lg-32mr50c-b-1.webp",
+      "assets/img/lg-32mr50c-b-2.webp",
+      "assets/img/lg-32mr50c-b-3.webp"
+    ],
+    "category": "Gaming",
+    "isFeatured": false,
+    "showInTopMenu": false,
+    "retailPrice": 136.99,
+    "discountedPrice": 130.0,
+    "priceRange": "budget",
+    "avgRating": 4.7,
+    "reviewCount": 829,
+    "priceCapturedAt": "2026-09-18",
+    "panelType": "VA",
+    "sizeInches": 31.5,
+    "resolution": "1080p",
+    "refreshRateHz": 100,
+    "responseTimeMs": 5,
+    "brightnessNits": null,
+    "hdr": null,
+    "curved": true,
+    "curvatureRadius": "1500R",
+    "syncTech": "FreeSync",
+    "heightAdjustable": false,
+    "pivot": false,
+    "weightKg": null,
+    "warrantyYears": null,
+    "specsExtra": {
+      "Contraste": "3000:1",
+      "Gama de color": "NTSC 72%",
+      "Conexiones": "1x HDMI 1.4"
+    },
+    "scoreSharpness": 1,
+    "scoreSmoothness": 1,
+    "scoreColorHdr": 2,
+    "scoreErgonomics": 2,
+    "scoreGaming": 3,
+    "scoreValue": 6,
+    "description": "Un curvo VA de 32\" y resolución Full HD en \"oferta flash\", con casi 830 valoraciones y 4,7 estrellas — de los monitores con más recorrido de venta de esta ampliación del catálogo.",
+    "editorialBody": "<p>El 32MR50C-B ofrece una pantalla curva 1500R grande (32\") a un precio bajo, con panel VA de 3000:1 de contraste, ideal para tener varias ventanas abiertas a la vez en el día a día. Con casi 830 valoraciones y 4,7 estrellas es, de largo, el modelo con más recorrido de compra de este lote de incorporaciones.</p><p>El matiz importante, señalado en detalle por una reseña muy completa en Amazon España, es que estirar una resolución Full HD (1920x1080) sobre 32 pulgadas reduce la densidad de píxeles: a la distancia habitual de uso en escritorio se aprecia cierto pixelado, especialmente en texto pequeño y en trabajos con gráficos detallados. Para ver vídeo, fotos o jugar no resulta muy molesto, pero no es la mejor opción para pasar muchas horas leyendo texto denso o editando gráficos con detalle fino.</p><p>Sigue siendo una compra razonable para quien prioriza tamaño de pantalla y curvatura sobre nitidez de texto.</p>",
+    "pros": [
+      "Pantalla curva de 32\" a precio de monitor de gama de entrada",
+      "Casi 830 valoraciones con 4,7 estrellas de media",
+      "Buen contraste (3000:1) típico de panel VA"
+    ],
+    "cons": [
+      "Resolución Full HD estirada sobre 32\" produce pixelado visible en texto pequeño, según reseñas detalladas",
+      "100Hz y 5ms de respuesta, por debajo de otros monitores gaming de este catálogo",
+      "Sin ajuste de altura ni pivote"
+    ],
+    "idealFor": "Quien busca una pantalla grande y curva para multitarea, vídeo o consumo de contenido, sin que la nitidez del texto sea la prioridad.",
+    "editorPick": "La pantalla más grande y con más valoraciones de esta ronda de ofertas.",
+    "reviewsSummary": "Con 829 valoraciones y 4,7 estrellas, los compradores valoran mucho la relación calidad-precio y la calidad de imagen general; una reseña detallada advierte de pixelado visible en texto por estirar Full HD sobre 32 pulgadas.",
+    "reviews": [
+      {
+        "author": "Jesus C.",
+        "stars": 5,
+        "text": "Peana sólida y estable con un montaje rápido y práctico. La pantalla mate previene muy bien los reflejos, el contraste y brillo son buenos. La relación calidad-precio es buena, pero hay que tener claro el uso previsto: para edición de gráficos con detalles pequeños o programación con líneas de texto densas se aprecia pixelado."
+      }
+    ],
+    "sample": false
   }
 ]
