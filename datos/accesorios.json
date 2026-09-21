@@ -48,5 +48,45 @@
     "reviewCount": 4128,
     "image": "assets/img/acc-kit-limpieza.webp",
     "affiliate_url": "https://www.amazon.es/dp/B0BZCTRKNK?tag=dozerid-21"
+  },
+  {
+    "id": "acc-hub-usbc-belkin",
+    "title": "Belkin Connect Hub USB-C de 8 puertos",
+    "tagline": "Conecta tu monitor por HDMI 4K@60Hz y carga el portátil a la vez (100W) desde un solo cable USB-C. -27% de oferta.",
+    "price": "43,99 € (antes 59,99 €)",
+    "avgRating": 4.4,
+    "reviewCount": 129,
+    "image": "assets/img/acc-hub-usbc-belkin.webp",
+    "affiliate_url": "https://www.amazon.es/dp/B0FXXJMY3W?tag=dozerid-21"
+  },
+  {
+    "id": "acc-soporte-doble-grifema",
+    "title": "GRIFEMA GB2001A-2 — Brazo doble monitor",
+    "tagline": "Para montar dos monitores de 13 a 27\" con altura, giro e inclinación ajustables. -8% de oferta.",
+    "price": "22,99 € (antes 24,99 €)",
+    "avgRating": 4.4,
+    "reviewCount": 880,
+    "image": "assets/img/acc-soporte-doble-grifema.webp",
+    "affiliate_url": "https://www.amazon.es/dp/B0CQLS4NKL?tag=dozerid-21"
+  },
+  {
+    "id": "acc-elevador-mars-gaming",
+    "title": "Mars Gaming MGDS — Elevador de escritorio para monitor",
+    "tagline": "Eleva el monitor 17cm a una altura ergonómica y deja hueco libre para el teclado. -10% de oferta.",
+    "price": "14,31 € (antes 15,90 €)",
+    "avgRating": 4.6,
+    "reviewCount": 109,
+    "image": "assets/img/acc-elevador-mars-gaming.webp",
+    "affiliate_url": "https://www.amazon.es/dp/B0D37X627C?tag=dozerid-21"
+  },
+  {
+    "id": "acc-webcam-trust-oran",
+    "title": "Trust Oran — Webcam 1080p con filtro de privacidad",
+    "tagline": "Cámara con micrófono y tapa de privacidad integrada para videollamadas. -16% de oferta.",
+    "price": "20,99 € (antes 24,99 €)",
+    "avgRating": 4.3,
+    "reviewCount": 184,
+    "image": "assets/img/acc-webcam-trust-oran.webp",
+    "affiliate_url": "https://www.amazon.es/dp/B0FHQKPVY2?tag=dozerid-21"
   }
 ]
