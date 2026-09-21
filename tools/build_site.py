@@ -150,7 +150,7 @@ def render_nav(active_href):
     return """
 <header class="nav">
   <div class="container nav-inner">
-    <a class="brand" href="index.html"><span class="brand-dot"></span>{name}</a>
+    <a class="brand" href="index.html"><img class="brand-logo" src="assets/img/logo-cat.png" alt="" width="28" height="28">{name}</a>
     <nav class="nav-links" aria-label="Principal">{links}<a class="nav-cta" href="comparador.html">Comparar <span data-compare-count></span></a></nav>
     <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú">☰</button>
   </div>
@@ -165,7 +165,7 @@ def render_footer():
   <div class="container">
     <div class="footer-grid">
       <div>
-        <a class="brand" href="index.html"><span class="brand-dot"></span>{name}</a>
+        <a class="brand" href="index.html"><img class="brand-logo" src="assets/img/logo-cat.png" alt="" width="28" height="28">{name}</a>
         <p style="color:var(--text-dim); margin-top:.6rem; max-width:42ch;">{tagline}</p>
       </div>
       <div class="footer-links">{links}</div>
@@ -220,7 +220,8 @@ def page_shell(title, description, body, active_nav="", canonical="", extra_head
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{description}">
 {image_tags}
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap">
@@ -933,20 +934,6 @@ def write(rel_path, content):
     print("  wrote", rel_path)
 
 
-def build_favicon():
-    path = os.path.join(ROOT, "assets", "img", "favicon.svg")
-    if os.path.exists(path):
-        return
-    svg = ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">'
-           '<rect width="32" height="32" rx="7" fill="#0a0d13"/>'
-           '<rect x="6" y="8" width="20" height="13" rx="2" fill="#7dd3fc"/>'
-           '<rect x="13" y="23" width="6" height="3" fill="#a3e635"/>'
-           '</svg>')
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(svg)
-    print("  wrote assets/img/favicon.svg")
-
-
 def build_sitemap(products):
     today = date.today().isoformat()
     urls = [("index.html", "1.0", "weekly")]
@@ -1002,7 +989,6 @@ def main():
     print("Generando ScreenScope ({0} productos)…".format(len(products)))
     cleanup_old_pages()
     cleanup_stale_fichas(products)
-    build_favicon()
     featured = next((p for p in products if p.get("isFeatured") and p.get("images")), None)
     fallback = next((p for p in products if p.get("images")), None)
     chosen = featured or fallback
