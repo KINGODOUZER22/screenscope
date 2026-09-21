@@ -5096,5 +5096,388 @@
       }
     ],
     "sample": false
+  },
+  {
+    "id": "lg-27u411a-b",
+    "asin": "B0FKNKDNXN",
+    "name": "LG 27U411A-B",
+    "brand": "LG",
+    "affiliate_url": "https://www.amazon.es/dp/B0FKNKDNXN?tag=dozerid-21",
+    "affiliate_tag": "dozerid-21",
+    "canonical_url": "https://www.amazon.es/dp/B0FKNKDNXN",
+    "images": [
+      "assets/img/lg-27u411a-b-1.webp",
+      "assets/img/lg-27u411a-b-2.webp",
+      "assets/img/lg-27u411a-b-3.webp"
+    ],
+    "category": "Gaming",
+    "isFeatured": false,
+    "showInTopMenu": false,
+    "retailPrice": 119.0,
+    "discountedPrice": 99.0,
+    "priceRange": "budget",
+    "avgRating": 4.7,
+    "reviewCount": 168,
+    "priceCapturedAt": "2026-09-20",
+    "panelType": "IPS",
+    "sizeInches": 27,
+    "resolution": "1080p",
+    "refreshRateHz": 120,
+    "responseTimeMs": 5,
+    "brightnessNits": null,
+    "hdr": null,
+    "curved": false,
+    "curvatureRadius": null,
+    "syncTech": "FreeSync",
+    "heightAdjustable": false,
+    "pivot": false,
+    "weightKg": null,
+    "warrantyYears": null,
+    "specsExtra": {
+      "Cobertura de color": "99% sRGB",
+      "Extras": "Super Resolution+, Black Stabilizer",
+      "Conexiones": "HDMI 2.0 (sin puertos USB)"
+    },
+    "scoreSharpness": 1,
+    "scoreSmoothness": 1,
+    "scoreColorHdr": 2,
+    "scoreErgonomics": 2,
+    "scoreGaming": 5,
+    "scoreValue": 7,
+    "description": "Un monitor de 27\" Full HD con 120Hz y FreeSync, con un 17% de descuento (de 119€ a 99€) y 168 valoraciones con 4,7 estrellas — de los mejor valorados de este lote de ofertas.",
+    "editorialBody": "<p>El 27U411A-B es la propuesta más sencilla de LG en este lote: panel IPS Full HD de 27\", 120Hz y FreeSync, sin extras de ergonomía ni HDR, pero con buena cobertura de color (99% sRGB) para el precio.</p><p>Las reseñas destacan sobre todo la buena calidad de imagen y resolución para el precio; varias señalan como limitación la falta de puertos USB y de altavoces integrados, algo a tener en cuenta si buscas conectividad adicional.</p><p>Con un 17% de descuento activo, es una opción sólida como monitor de entrada de 27\" para trabajo, consola o uso general.</p>",
+    "pros": [
+      "17% de descuento sobre su precio recomendado",
+      "168 valoraciones con 4,7 estrellas — de las mejores de este lote",
+      "Panel IPS de 27\" con 99% de cobertura sRGB"
+    ],
+    "cons": [
+      "Sin puertos USB, solo HDMI",
+      "Sin altavoces integrados",
+      "Sin ajuste de altura, solo inclinación"
+    ],
+    "idealFor": "Quien busca un monitor de 27\" sencillo y bien valorado para trabajo, consola o uso general, sin necesidad de HDR ni ergonomía avanzada.",
+    "editorPick": "El mejor valorado (4,7★) de este lote de ofertas.",
+    "reviewsSummary": "Con 168 valoraciones y 4,7 estrellas, los compradores destacan la buena calidad de imagen y resolución para el precio; varias reseñas señalan la falta de puertos USB y de altavoces como limitación.",
+    "reviews": [
+      {
+        "author": "Cliente Amazon",
+        "stars": 4,
+        "text": "Buen precio, quizás deberían tener más conexiones, lo he conectado con doble pantalla usando un switch."
+      },
+      {
+        "author": "ricardo rojas campoverde",
+        "stars": 4,
+        "text": "Muy bien la verdad, buena calidad, lo único es que no me di cuenta de que no trae altavoces, por lo demás estoy encantado."
+      }
+    ],
+    "sample": false
+  },
+  {
+    "id": "msi-mp225a-e12vl",
+    "asin": "B0FWCRPRGJ",
+    "name": "MSI Pro MP225A E12VL",
+    "brand": "MSI",
+    "affiliate_url": "https://www.amazon.es/dp/B0FWCRPRGJ?tag=dozerid-21",
+    "affiliate_tag": "dozerid-21",
+    "canonical_url": "https://www.amazon.es/dp/B0FWCRPRGJ",
+    "images": [
+      "assets/img/msi-mp225a-e12vl-1.webp",
+      "assets/img/msi-mp225a-e12vl-2.webp",
+      "assets/img/msi-mp225a-e12vl-3.webp"
+    ],
+    "category": "Gaming",
+    "isFeatured": false,
+    "showInTopMenu": false,
+    "retailPrice": 80.99,
+    "discountedPrice": 69.0,
+    "priceRange": "budget",
+    "avgRating": 4.7,
+    "reviewCount": 18,
+    "priceCapturedAt": "2026-09-20",
+    "panelType": "VA",
+    "sizeInches": 21.45,
+    "resolution": "1080p",
+    "refreshRateHz": 120,
+    "responseTimeMs": 1,
+    "brightnessNits": 300,
+    "hdr": null,
+    "curved": false,
+    "curvatureRadius": null,
+    "syncTech": "FreeSync",
+    "heightAdjustable": false,
+    "pivot": false,
+    "weightKg": null,
+    "warrantyYears": null,
+    "specsExtra": {
+      "Contraste": "4000:1",
+      "Cobertura de color": ">100% sRGB",
+      "Certificación": "TÜV Rheinland Eye Comfort",
+      "Conexiones": "HDMI 1.4b, D-Sub (VGA)"
+    },
+    "scoreSharpness": 3,
+    "scoreSmoothness": 3,
+    "scoreColorHdr": 3,
+    "scoreErgonomics": 2,
+    "scoreGaming": 7,
+    "scoreValue": 7,
+    "description": "Un monitor compacto de 21,45\" con 120Hz y 1ms, en oferta flash con un 15% de descuento (de 80,99€ a 69€) — el tamaño más pequeño de todo el catálogo.",
+    "editorialBody": "<p>El MP225A E12VL cubre un hueco poco frecuente en el catálogo: un panel VA compacto de 21,45\" con 120Hz, 1ms y alto contraste (4000:1), certificado TÜV Rheinland para confort visual, pensado tanto para oficina como para un segundo monitor de escritorio reducido.</p><p>Las pocas reseñas disponibles son consistentemente positivas, destacando la buena imagen sin reflejos y la facilidad de montaje; varios compradores lo usan como monitor secundario o para espacios de trabajo reducidos, incluyendo casos de uso múltiple (2-3 unidades para varios puestos).</p><p>Con un 15% de descuento en oferta flash, es la opción más compacta y económica de todo el catálogo de ScreenScope.</p>",
+    "pros": [
+      "El monitor más compacto (21,45\") de todo el catálogo",
+      "120Hz y 1ms con alto contraste VA (4000:1)",
+      "15% de descuento en oferta flash"
+    ],
+    "cons": [
+      "Solo 18 valoraciones por ser un modelo con poco recorrido",
+      "Sin ajuste de altura, solo inclinación",
+      "Conectividad limitada: solo HDMI y VGA"
+    ],
+    "idealFor": "Escritorios pequeños, segundo monitor o espacios reducidos que no necesitan una pantalla grande.",
+    "editorPick": "El más compacto de todo el catálogo — ideal como segunda pantalla.",
+    "reviewsSummary": "Con solo 18 valoraciones pero 4,7 estrellas, los compradores destacan la buena imagen sin reflejos y lo sencillo del montaje; varios lo usan como monitor secundario en casa u oficina.",
+    "reviews": [
+      {
+        "author": "Paco",
+        "stars": 5,
+        "text": "Buen producto para el precio que tiene. Buena imagen sin reflejos."
+      },
+      {
+        "author": "Cliente Amazon",
+        "stars": 5,
+        "text": "Todo perfecto. Sin defectos en el monitor, solo en la caja. Instalado en soporte VESA y funcionando."
+      }
+    ],
+    "sample": false
+  },
+  {
+    "id": "msi-mag-276cfa-e20",
+    "asin": "B0FWCPNPCV",
+    "name": "MSI MAG 276CFA E20",
+    "brand": "MSI",
+    "affiliate_url": "https://www.amazon.es/dp/B0FWCPNPCV?tag=dozerid-21",
+    "affiliate_tag": "dozerid-21",
+    "canonical_url": "https://www.amazon.es/dp/B0FWCPNPCV",
+    "images": [
+      "assets/img/msi-mag-276cfa-e20-1.webp",
+      "assets/img/msi-mag-276cfa-e20-2.webp",
+      "assets/img/msi-mag-276cfa-e20-3.webp"
+    ],
+    "category": "Gaming",
+    "isFeatured": false,
+    "showInTopMenu": false,
+    "retailPrice": 151.99,
+    "discountedPrice": 119.0,
+    "priceRange": "budget",
+    "avgRating": 4.4,
+    "reviewCount": 33,
+    "priceCapturedAt": "2026-09-20",
+    "panelType": "VA",
+    "sizeInches": 27,
+    "resolution": "1080p",
+    "refreshRateHz": 200,
+    "responseTimeMs": 0.5,
+    "brightnessNits": null,
+    "hdr": null,
+    "curved": true,
+    "curvatureRadius": "1500R",
+    "syncTech": "FreeSync",
+    "heightAdjustable": false,
+    "pivot": false,
+    "weightKg": null,
+    "warrantyYears": null,
+    "specsExtra": {
+      "Contraste": "3000:1 (100M:1 dinámico)",
+      "Cobertura de color": "98% sRGB",
+      "Conexiones": "DisplayPort 1.2a, HDMI 2.0b CEC",
+      "Extras": "MSI AI Vision, joystick de navegación"
+    },
+    "scoreSharpness": 1,
+    "scoreSmoothness": 7,
+    "scoreColorHdr": 3,
+    "scoreErgonomics": 2,
+    "scoreGaming": 9,
+    "scoreValue": 8,
+    "description": "Un curvo gaming de 27\" con 200Hz y 0,5ms, con un 22% de descuento (de 151,99€ a 119€) — de los más rápidos en tasa de refresco de todo el catálogo por debajo de 120€.",
+    "editorialBody": "<p>El MAG 276CFA E20 lleva la fórmula del MAG 242CA (ya presente en el catálogo) a un tamaño mayor: panel Rapid VA curvo de 27\" y 1500R, con 200Hz y 0,5ms de respuesta — una combinación de fluidez poco habitual por debajo de los 120€.</p><p>Las reseñas disponibles son escasas pero sólidas, con comentarios que destacan la calidad de imagen y la facilidad de conexión, sin quejas relevantes sobre el panel en sí.</p><p>Con un 22% de descuento activo, es de las opciones más rápidas (200Hz) de toda la comparativa en su franja de precio.</p>",
+    "pros": [
+      "200Hz y 0,5ms de respuesta — de lo más rápido del catálogo en su precio",
+      "22% de descuento sobre su precio recomendado",
+      "Curvatura 1500R con buen contraste VA (3000:1)"
+    ],
+    "cons": [
+      "Solo 33 valoraciones por ser un modelo con poco recorrido",
+      "Sin ajuste de altura, solo inclinación",
+      "Sin certificación HDR oficial pese a anunciarse \"compatible con HDR\""
+    ],
+    "idealFor": "Quien quiere la mayor fluidez (200Hz) posible en un curvo de 27\" sin superar los 120€.",
+    "editorPick": "El más rápido en Hz (200Hz) de este lote de ofertas.",
+    "reviewsSummary": "Con 33 valoraciones y 4,4 estrellas, los pocos compradores que han opinado destacan la buena calidad de imagen y lo sencillo de la conexión, sin quejas relevantes sobre el panel.",
+    "reviews": [
+      {
+        "author": "Verónica Pérez Suárez",
+        "stars": 5,
+        "text": "Se nota muchísimo la calidad de imagen. Como siempre encantada con la marca."
+      },
+      {
+        "author": "Rayan el harrach",
+        "stars": 5,
+        "text": "Es perfecto, buena calidad, es muy fácil de conectar."
+      }
+    ],
+    "sample": false
+  },
+  {
+    "id": "asus-rog-strix-xg32ucwg",
+    "asin": "B0FFNDHNHB",
+    "name": "ASUS ROG Strix XG32UCWG",
+    "brand": "ASUS",
+    "affiliate_url": "https://www.amazon.es/dp/B0FFNDHNHB?tag=dozerid-21",
+    "affiliate_tag": "dozerid-21",
+    "canonical_url": "https://www.amazon.es/dp/B0FFNDHNHB",
+    "images": [
+      "assets/img/asus-rog-strix-xg32ucwg-1.webp",
+      "assets/img/asus-rog-strix-xg32ucwg-2.webp",
+      "assets/img/asus-rog-strix-xg32ucwg-3.webp"
+    ],
+    "category": "Gaming",
+    "isFeatured": false,
+    "showInTopMenu": false,
+    "retailPrice": 949.0,
+    "discountedPrice": 774.33,
+    "priceRange": "premium",
+    "avgRating": 4.3,
+    "reviewCount": 201,
+    "priceCapturedAt": "2026-09-20",
+    "panelType": "OLED",
+    "sizeInches": 31.5,
+    "resolution": "4K",
+    "refreshRateHz": 165,
+    "responseTimeMs": 0.03,
+    "brightnessNits": null,
+    "hdr": "HDR400",
+    "curved": false,
+    "curvatureRadius": null,
+    "syncTech": "FreeSync",
+    "heightAdjustable": true,
+    "pivot": null,
+    "weightKg": 7.3,
+    "warrantyYears": 3.0,
+    "specsExtra": {
+      "Panel": "WOLED TrueBlack Glossy, modo dual 4K@165Hz / FHD@330Hz",
+      "Color": "99% DCI-P3, 10 bits, ΔE < 2",
+      "Conexiones": "HDMI 2.1, USB-C",
+      "Extras": "ASUS OLED Care Pro con sensor de proximidad, DisplayWidget Center"
+    },
+    "scoreSharpness": 7,
+    "scoreSmoothness": 10,
+    "scoreColorHdr": 10,
+    "scoreErgonomics": 5,
+    "scoreGaming": 9,
+    "scoreValue": 6,
+    "description": "Un monitor OLED premium de 32\" con modo dual (4K a 165Hz o FHD a 330Hz), HDR400 True Black y 0,03ms de respuesta, con un 18% de descuento (de 949€ a 774,33€) — el más avanzado del catálogo en imagen y color.",
+    "editorialBody": "<p>El XG32UCWG es, en especificaciones, el monitor más avanzado de todo el catálogo: panel WOLED de 32\" con modo dual (4K nativo a 165Hz o Full HD a 330Hz cambiando sobre la marcha), HDR400 True Black, 99% de cobertura DCI-P3, color real de 10 bits y un tiempo de respuesta de 0,03ms. Incluye tecnología ASUS OLED Care Pro con sensor de proximidad para reducir el riesgo de quemado de panel cuando el usuario se ausenta.</p><p>Las reseñas más detalladas describen una calidad de imagen \"sobresaliente\" y un acabado de peana que ASUS ha cuidado especialmente. Dicho esto, el resumen de opiniones generado a partir de las reseñas de Amazon señala que una parte de los compradores reporta fallos — incluyendo al menos un caso documentado de línea vertical de subpíxeles muertos a menos de un mes de uso — algo a tener en cuenta en la tecnología OLED en general y en este modelo en particular.</p><p>Con un 18% de descuento activo, es una compra de gama alta pensada para quien prioriza calidad de imagen y color por encima de todo, asumiendo el riesgo de fiabilidad que reportan algunas reseñas.</p>",
+    "pros": [
+      "Panel WOLED 4K/165Hz con modo dual a FHD/330Hz y 0,03ms de respuesta",
+      "HDR400 True Black, 99% DCI-P3 y color de 10 bits — el más avanzado del catálogo",
+      "18% de descuento sobre su precio recomendado (949€ → 774,33€)"
+    ],
+    "cons": [
+      "El resumen de opiniones de Amazon señala reportes de fallos en una parte de las unidades",
+      "Una reseña documenta una línea de subpíxeles muertos tras menos de un mes de uso",
+      "Precio elevado incluso con descuento"
+    ],
+    "idealFor": "Edición de foto/vídeo y gaming de alta gama que priorizan calidad de imagen OLED por encima del presupuesto.",
+    "editorPick": "El monitor más avanzado en imagen y color de todo el catálogo — y también el más caro.",
+    "reviewsSummary": "Con 201 valoraciones y 4,3 estrellas, los compradores destacan una calidad de imagen sobresaliente, aunque el resumen de opiniones generado por Amazon señala que una parte reporta fallos; una reseña documenta subpíxeles muertos tras menos de un mes de uso.",
+    "reviews": [
+      {
+        "author": "Nacho J.",
+        "stars": 5,
+        "text": "El monitor es sobresaliente. Tiene una calidad de imagen que no he visto en otros OLED. En cuanto a la peana, un verdadero acierto de Asus: elegante, funcional y apenas se nota sobre el escritorio."
+      },
+      {
+        "author": "Javier Novelli",
+        "stars": 1,
+        "text": "Monitor developed a vertical line of dead blue subpixels from top to bottom in the middle of the screen after less than a month of usage. Updating firmware did nothing."
+      }
+    ],
+    "sample": false
+  },
+  {
+    "id": "aoc-q27g42xe",
+    "asin": "B0DT4R1N9N",
+    "name": "AOC Q27G42XE",
+    "brand": "AOC",
+    "affiliate_url": "https://www.amazon.es/dp/B0DT4R1N9N?tag=dozerid-21",
+    "affiliate_tag": "dozerid-21",
+    "canonical_url": "https://www.amazon.es/dp/B0DT4R1N9N",
+    "images": [
+      "assets/img/aoc-q27g42xe-1.webp",
+      "assets/img/aoc-q27g42xe-2.webp",
+      "assets/img/aoc-q27g42xe-3.webp"
+    ],
+    "category": "Gaming",
+    "isFeatured": false,
+    "showInTopMenu": false,
+    "retailPrice": 179.0,
+    "discountedPrice": 138.94,
+    "priceRange": "budget",
+    "avgRating": 4.5,
+    "reviewCount": 352,
+    "priceCapturedAt": "2026-09-20",
+    "panelType": "IPS",
+    "sizeInches": 27,
+    "resolution": "1440p",
+    "refreshRateHz": 180,
+    "responseTimeMs": 1,
+    "brightnessNits": null,
+    "hdr": "HDR10",
+    "curved": false,
+    "curvatureRadius": null,
+    "syncTech": "FreeSync+G-Sync",
+    "heightAdjustable": false,
+    "pivot": false,
+    "weightKg": null,
+    "warrantyYears": null,
+    "specsExtra": {
+      "Panel": "Fast IPS",
+      "Conexiones": "2x HDMI 2.0, 1x DisplayPort 1.4",
+      "Nota": "El HDMI limita a 144Hz; los 180Hz completos requieren DisplayPort"
+    },
+    "scoreSharpness": 4,
+    "scoreSmoothness": 4,
+    "scoreColorHdr": 5,
+    "scoreErgonomics": 2,
+    "scoreGaming": 8,
+    "scoreValue": 8,
+    "description": "Un QHD de 27\" Fast IPS con 180Hz, 1ms y HDR10, con un 22% de descuento (de 179€ a 138,94€) y más de 350 valoraciones con 4,5 estrellas.",
+    "editorialBody": "<p>El Q27G42XE combina panel Fast IPS QHD, 180Hz, 1ms y doble compatibilidad de sincronización (FreeSync y G-Sync) con HDR10, en la variante sin ajuste de altura pero con altavoces integrados.</p><p>Las reseñas son detalladas y mayoritariamente muy positivas: varios compradores señalan que el cable HDMI incluido limita a 144Hz y que hace falta usar el DisplayPort para alcanzar los 180Hz completos — un matiz importante que no siempre se explica en el anuncio. El punto débil más repetido son los altavoces integrados, descritos como de sonido pobre, y algún caso de \"IPS glow\" leve, un efecto conocido y común en paneles IPS en general.</p><p>Con un 22% de descuento activo y más de 350 valoraciones, es de las opciones QHD gaming más sólidas y mejor documentadas por sus propios compradores en todo el catálogo.</p>",
+    "pros": [
+      "180Hz, 1ms y HDR10 con doble compatibilidad FreeSync/G-Sync",
+      "22% de descuento sobre su precio recomendado",
+      "Más de 350 valoraciones con 4,5 estrellas"
+    ],
+    "cons": [
+      "El cable HDMI incluido limita a 144Hz — los 180Hz completos requieren DisplayPort",
+      "Altavoces integrados de sonido pobre, según varias reseñas",
+      "Sin ajuste de altura en esta variante"
+    ],
+    "idealFor": "Quien quiere QHD 180Hz con doble compatibilidad de sincronización y no depende del sonido integrado.",
+    "editorPick": "El más documentado por sus propios compradores (352 reseñas) de este lote de ofertas.",
+    "reviewsSummary": "Con 352 valoraciones y 4,5 estrellas, los compradores destacan la buena relación calidad-precio y la nitidez de imagen; varias reseñas detalladas avisan de que el cable HDMI incluido limita a 144Hz y de que los altavoces integrados suenan mal.",
+    "reviews": [
+      {
+        "author": "Viktor",
+        "stars": 5,
+        "text": "The monitor does not have a height-adjustable stand. When connected via DP, Windows recognized 180Hz automatically; via HDMI it defaults to 60Hz but can be changed to 144Hz in ajustes."
+      },
+      {
+        "author": "Alfred",
+        "stars": 5,
+        "text": "Llega a 144Hz con HDMI y los 180Hz con DP. El contra más importante que le encuentro son los altavoces incorporados, suenan fatal."
+      }
+    ],
+    "sample": false
   }
 ]
