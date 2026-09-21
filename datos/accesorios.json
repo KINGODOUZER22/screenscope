@@ -88,5 +88,25 @@
     "reviewCount": 184,
     "image": "assets/img/acc-webcam-trust-oran.webp",
     "affiliate_url": "https://www.amazon.es/dp/B0FHQKPVY2?tag=dozerid-21"
+  },
+  {
+    "id": "acc-adaptador-usba-usbc-hama",
+    "title": "Hama Adaptador USB-A a USB-C (10 Gbit/s)",
+    "tagline": "Convierte cualquier puerto USB-A en USB-C para usar cables y periféricos modernos en un PC o monitor más antiguo. -20% de oferta.",
+    "price": "7,99 € (antes 9,99 €)",
+    "avgRating": 4.7,
+    "reviewCount": 224,
+    "image": "assets/img/acc-adaptador-usba-usbc-hama.webp",
+    "affiliate_url": "https://www.amazon.es/dp/B0D6CGKYSR?tag=dozerid-21"
+  },
+  {
+    "id": "acc-adaptador-usbc-usba-basics",
+    "title": "Amazon Basics Adaptador USB-C a USB-A",
+    "tagline": "El camino inverso: conecta ratones, pendrives o teclados USB-A clásicos a un portátil o hub que solo tiene puertos USB-C. -14% de oferta.",
+    "price": "8,38 € (antes 9,70 €)",
+    "avgRating": 4.6,
+    "reviewCount": 58718,
+    "image": "assets/img/acc-adaptador-usbc-usba-basics.webp",
+    "affiliate_url": "https://www.amazon.es/dp/B01GGKYXVE?tag=dozerid-21"
   }
 ]
