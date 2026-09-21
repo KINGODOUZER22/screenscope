@@ -263,11 +263,27 @@ details.specs-extra summary { cursor: pointer; font-weight: 600; }
 .hero-grid { display: grid; gap: 2rem; align-items: center; }
 .hero p.lede { margin-top: 1rem; }
 .hero-ctas { display: flex; gap: 1rem; margin-top: 1.6rem; flex-wrap: wrap; }
+.hero-side { display: flex; flex-direction: column; gap: 1.4rem; }
 .trust-block { display: grid; gap: 1.4rem; grid-template-columns: 1fr; margin-top: 1rem; }
 @media (min-width: 720px) { .trust-block { grid-template-columns: repeat(3, 1fr); } }
 .trust-item { padding: 1.2rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-card); }
 .trust-item h3 { font-size: 1rem; margin-bottom: .4rem; }
 .trust-item p { color: var(--text-dim); font-size: .88rem; }
+
+.weekly-deals { padding: 1.1rem 1.2rem 1.2rem; border: 1px solid rgba(163,230,53,.35); border-radius: var(--radius); background: var(--bg-card); box-shadow: 0 0 0 1px rgba(163,230,53,.05) inset; }
+.weekly-deals-head { display: flex; align-items: baseline; justify-content: space-between; gap: .6rem; margin-bottom: .9rem; flex-wrap: wrap; }
+.weekly-deals-label { font-family: var(--mono); font-size: .74rem; letter-spacing: .04em; text-transform: uppercase; color: var(--cta); }
+.weekly-deals-date { font-size: .72rem; color: var(--text-mute); }
+.weekly-deals-list { display: flex; flex-direction: column; gap: .3rem; }
+.weekly-deal-item { display: flex; align-items: center; gap: .7rem; padding: .5rem; margin-inline: -.5rem; border-radius: var(--radius-sm); transition: background .2s var(--ease-out); }
+.weekly-deal-item:hover { background: var(--bg-raised); }
+.weekly-deal-item img { width: 48px; height: 48px; object-fit: contain; background: #fff; border-radius: 8px; flex: none; }
+.weekly-deal-info { flex: 1 1 auto; min-width: 0; }
+.weekly-deal-name { font-size: .84rem; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.weekly-deal-price { display: flex; gap: .5rem; align-items: baseline; margin-top: .1rem; }
+.weekly-deal-price .price-now { font-size: .92rem; }
+.weekly-deal-price .price-before { font-size: .72rem; }
+.weekly-deal-item .badge { flex: none; }
 
 .cat-entry { padding: 1.4rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg-card); transition: border-color .2s var(--ease-out), transform .2s var(--ease-out); }
 .cat-entry:hover { border-color: var(--accent); transform: translateY(-3px); }

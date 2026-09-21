@@ -598,6 +598,65 @@ def render_curio_row():
 </div>""".format(widgets=widgets)
 
 
+def load_ofertas_semana():
+    path = os.path.join(ROOT, "datos", "ofertas_semana.json")
+    if not os.path.exists(path):
+        return None
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def fmt_fecha_es(iso_date):
+    meses = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
+             "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+    y, m, d = iso_date.split("-")
+    return "{0} de {1}".format(int(d), meses[int(m) - 1])
+
+
+def render_weekly_deal_item(p):
+    discount_pct = None
+    if p.get("retailPrice") and p.get("discountedPrice") and p["retailPrice"] > p["discountedPrice"]:
+        discount_pct = round(100 * (1 - p["discountedPrice"] / p["retailPrice"]))
+    badge = '<span class="badge badge-offer">-{0}%</span>'.format(discount_pct) if discount_pct else ""
+    return """
+<a class="weekly-deal-item" href="{href}">
+  <img src="{img}" alt="{name}" loading="lazy" decoding="async">
+  <div class="weekly-deal-info">
+    <p class="weekly-deal-name">{name}</p>
+    <div class="weekly-deal-price">
+      <span class="price-now">{price_now}</span>
+      {price_before}
+    </div>
+  </div>
+  {badge}
+</a>""".format(
+        href=product_href(p), img=esc(p["images"][0]), name=esc(p["name"]),
+        price_now=fmt_eur(p.get("discountedPrice")),
+        price_before=('<span class="price-before">{0}</span>'.format(fmt_eur(p["retailPrice"]))
+                      if p.get("retailPrice") and p.get("discountedPrice") and p["retailPrice"] > p["discountedPrice"] else ""),
+        badge=badge,
+    )
+
+
+def render_weekly_deals(products):
+    data = load_ofertas_semana()
+    if not data or not data.get("picks"):
+        return ""
+    by_id = {p["id"]: p for p in products}
+    picks = [by_id[i] for i in data["picks"] if i in by_id]
+    if not picks:
+        return ""
+    items = "".join(render_weekly_deal_item(p) for p in picks)
+    return """
+<div class="weekly-deals reveal is-visible">
+  <div class="weekly-deals-head">
+    <span class="weekly-deals-label">&#128293; Ofertas de la semana</span>
+    <span class="weekly-deals-date">Actualizado el {fecha}</span>
+  </div>
+  <div class="weekly-deals-list">{items}</div>
+</div>""".format(items=items, fecha=esc(fmt_fecha_es(data["weekOf"])))
+
+
 def build_index(products):
     featured = [p for p in products if p.get("isFeatured")]
     cards = "".join(render_card(p) for p in featured or products)
@@ -606,6 +665,7 @@ def build_index(products):
         for c in CATEGORIES
     )
     curio_row = render_curio_row()
+    weekly_deals = render_weekly_deals(products)
     body = """
 <section class="hero">
   <div class="container hero-grid">
@@ -618,10 +678,13 @@ def build_index(products):
         <a class="btn btn-ghost" href="guia-mejor-monitor-gaming-2026.html">Leer la guía de compra</a>
       </div>
     </div>
-    <div class="trust-block">
-      <div class="trust-item"><h3>Cómo puntuamos</h3><p>Cada especificación se normaliza de 0 a 10 sobre todo el catálogo, así un "8" siempre significa lo mismo.</p></div>
-      <div class="trust-item"><h3>Datos reales, sin inventar</h3><p>Si falta un dato se muestra como "—", nunca un número inventado.</p></div>
-      <div class="trust-item"><h3>Con afiliados</h3><p>Ganamos una comisión en las compras que cumplen los requisitos en Amazon, sin coste para ti.</p></div>
+    <div class="hero-side">
+      <div class="trust-block">
+        <div class="trust-item"><h3>Cómo puntuamos</h3><p>Cada especificación se normaliza de 0 a 10 sobre todo el catálogo, así un "8" siempre significa lo mismo.</p></div>
+        <div class="trust-item"><h3>Datos reales, sin inventar</h3><p>Si falta un dato se muestra como "—", nunca un número inventado.</p></div>
+        <div class="trust-item"><h3>Con afiliados</h3><p>Ganamos una comisión en las compras que cumplen los requisitos en Amazon, sin coste para ti.</p></div>
+      </div>
+      {weekly_deals}
     </div>
   </div>
 </section>
@@ -645,7 +708,7 @@ def build_index(products):
   <div class="grid">{cat_cards}</div>
   {curio_row}
 </section>
-""".format(cards=cards, cat_cards=cat_cards, curio_row=curio_row)
+""".format(cards=cards, cat_cards=cat_cards, curio_row=curio_row, weekly_deals=weekly_deals)
     website_jsonld = {
         "@context": "https://schema.org",
         "@type": "WebSite",
