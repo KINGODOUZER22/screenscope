@@ -388,6 +388,22 @@
   }
 
   // ---------------------------------------------------------------
+  // Evento de afiliado (clics salientes a Amazon)
+  // ---------------------------------------------------------------
+  function initAffiliateClickTracking() {
+    document.addEventListener("click", function (e) {
+      var link = e.target.closest('a[rel~="sponsored"]');
+      if (!link) return;
+      if (typeof window.gtag !== "function") return;
+      window.gtag("event", "click_afiliado", {
+        link_url: link.href,
+        link_text: (link.textContent || "").trim(),
+        page_path: window.location.pathname,
+      });
+    });
+  }
+
+  // ---------------------------------------------------------------
   // Boot
   // ---------------------------------------------------------------
   function boot() {
@@ -399,6 +415,7 @@
     safe(renderComparator, "renderComparator");
     safe(initCategoryFilters, "initCategoryFilters");
     safe(initCookieConsent, "initCookieConsent");
+    safe(initAffiliateClickTracking, "initAffiliateClickTracking");
     document.documentElement.classList.add("is-ready");
   }
 
