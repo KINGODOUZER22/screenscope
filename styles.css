@@ -168,6 +168,15 @@ h3 { font-size: 1.2rem; }
   font-size: .82rem; color: var(--text-mute); line-height: 1.6;
 }
 
+.feedback-box {
+  margin-top: 1.6rem; padding: 1rem 1.2rem; border: 1px solid rgba(251,191,36,.3); border-radius: var(--radius);
+  background: var(--bg-card); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;
+}
+.feedback-title { font-weight: 600; font-size: .92rem; }
+.feedback-note { color: var(--text-dim); font-size: .82rem; margin-top: .15rem; }
+.feedback-btn { border-color: var(--warn); color: var(--warn); flex: none; }
+.feedback-btn:hover { background: rgba(251,191,36,.1); border-color: var(--warn); color: var(--warn); }
+
 .cookie-banner[hidden] { display: none; }
 .cookie-banner {
   position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 60;

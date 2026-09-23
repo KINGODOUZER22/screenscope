@@ -14,6 +14,7 @@ import math
 import html
 import os
 import sys
+import urllib.parse
 from datetime import date, datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -158,7 +159,25 @@ def render_nav(active_href):
 </header>""".format(name=esc(BRAND["name"]), links=links_html, mobile=mobile_html)
 
 
-def render_footer():
+FEEDBACK_EMAIL = "douzerking@gmail.com"
+
+
+def render_feedback_box(page_path=""):
+    page_url = SITE_URL + page_path if page_path else SITE_URL
+    subject = urllib.parse.quote("Problema en ScreenScope")
+    body = urllib.parse.quote("Describe aquí el problema que encontraste:\n\n\n---\nPágina: " + page_url)
+    mailto = "mailto:{0}?subject={1}&body={2}".format(FEEDBACK_EMAIL, subject, body)
+    return """
+<div class="feedback-box">
+  <div>
+    <p class="feedback-title">¿Algo no funciona bien o ves un dato incorrecto?</p>
+    <p class="feedback-note">Cuéntanoslo y lo revisamos — no hace falta que te registres.</p>
+  </div>
+  <a class="btn btn-ghost btn-sm feedback-btn" href="{mailto}">Reportar problema</a>
+</div>""".format(mailto=esc(mailto))
+
+
+def render_footer(page_path=""):
     links_html = "".join('<a href="{0}">{1}</a>'.format(href, esc(label)) for label, href in FOOTER_LINKS)
     return """
 <footer class="footer">
@@ -174,9 +193,11 @@ def render_footer():
       </div>
     </div>
     <p class="disclosure">{disclosure} Amazon y el logotipo de Amazon son marcas de Amazon.com, Inc. o sus filiales.</p>
+    {feedback_box}
   </div>
 </footer>""".format(name=esc(BRAND["name"]), tagline=esc(BRAND["tagline"]), links=links_html,
-                     year=date.today().year, disclosure=esc(BRAND["disclosureShort"]))
+                     year=date.today().year, disclosure=esc(BRAND["disclosureShort"]),
+                     feedback_box=render_feedback_box(page_path))
 
 
 def render_cookie_banner():
@@ -243,7 +264,7 @@ def page_shell(title, description, body, active_nav="", canonical="", extra_head
 </body>
 </html>""".format(title=esc(title), description=esc(description), canonical=esc(canonical_abs),
                    brand=esc(BRAND["name"]), keywords_tag=keywords_tag, image_tags=image_tags,
-                   nav=render_nav(active_nav), body=body, footer=render_footer(), ver=VER,
+                   nav=render_nav(active_nav), body=body, footer=render_footer(canonical), ver=VER,
                    cookie_banner=render_cookie_banner(),
                    extra_head=extra_head, extra_jsonld=extra_jsonld)
 
